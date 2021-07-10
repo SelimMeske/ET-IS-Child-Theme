@@ -81,7 +81,7 @@
     color: white;
     letter-spacing: 0.5px;
     padding: 0px 20px;
-    position: relative; 
+    position: relative;
 }
 
 .et-card:first-child {
@@ -141,7 +141,7 @@
     margin-right: 4px;
     cursor: pointer;
     overflow: hidden;
-    -webkit-box-shadow: 7px 10px 11px -3px rgba(0,0,0,0.5); 
+    -webkit-box-shadow: 7px 10px 11px -3px rgba(0,0,0,0.5);
     box-shadow: 7px 10px 11px -3px rgba(0,0,0,0.5);
     z-index: 2;
     position: relative;
@@ -185,7 +185,7 @@
 .et-close-popup-window {
     transform: translateX(500px);
     opacity: 0;
-    visibility: hidden; 
+    visibility: hidden;
     transition-duration: 0.5s;
 }
 
@@ -229,8 +229,12 @@
     display: none;
 }
 
+.et-card-buy-button {
+    background: #0c0c0c !important;
+}
+
 @media only screen and (max-width: 806px) {
-    
+
     .mobile-only-flex {
         flex-direction: column;
         justify-content: center;
@@ -250,16 +254,16 @@
     }
 
     .et-card {
-	width: 400px;	
+	width: 400px;
     }
-   
+
     .et-buy-button-wrap {
         background: #0c0c0c !important;
     }
 }
 
 @media only screen and (max-width: 450px) {
-    
+
     .et-card {
         width: 100%;
     }
@@ -267,7 +271,7 @@
     .et-choose-style-title {
         font-size: 14px !important;
     }
-    
+
     .et-main-popup-window {
         width: 100%;
         transform: translate(-50%, -60%);
@@ -280,13 +284,13 @@
     }
 
     .et-card p {
-    
+
        font-size: 14px !important;
     }
 }
 
 @media only screen and (max-width: 415px) {
-    
+
     .et-card {
         width: 100%;
     }
@@ -296,7 +300,7 @@
 }
 
 @media only screen and (max-width: 340px) {
-    
+
     .et-card {
         font-size: 12px !important;
     }
