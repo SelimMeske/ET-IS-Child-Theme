@@ -135,10 +135,7 @@ setTimeout(function() {
 
     function apply_skin_and_close() {
 
-        let addButtonClone = `
-    <span class="cart-button-image">
-            <img src="http://infinityskins.ba/wp-content/uploads/2021/06/shopping-cart-2.png" alt="">
-    </span>DODAJ`;
+        let addButtonClone = `DODAJ`;
 
         let chooseBackSkinButtonRibbon = backSkinCard.querySelector('.et-add-ribbon');
         let chooseCamSkinButtonRibbon = camSkinCard.querySelector('.et-add-ribbon');
