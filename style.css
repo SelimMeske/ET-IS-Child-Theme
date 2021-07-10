@@ -1,0 +1,303 @@
+/*
+ Theme Name:   Phlox
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  Phlox Child Theme
+ Author:       John Doe
+ Author URI:   http://example.com
+ Template:     phlox
+ Version:      3.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twentyfifteenchild
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.et-d-flex {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#et-figure {
+    background: #0c0c0c;
+    width: 100%;
+    height: 100%;
+    margin: 0px !important;
+}
+
+.app {
+    width: 100%;
+    width: 100%;
+}
+
+.cam-image {
+    background: blue;
+}
+
+.et-mobile-container {
+    width: 50%;
+}
+
+.et-picker-container {
+    width: 50%;
+    flex-direction: column;
+    position: relative;
+}
+
+.main-svg {
+    max-height: 50vh;
+    min-height: 20em;
+}
+
+.et-container {
+    width: 100%;
+    background: rgb(54, 54, 54);
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.et-card {
+    height: 70px;
+    width: 100%;
+    background: #2b2a2b;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 0.5px;
+    padding: 0px 20px;
+    position: relative; 
+}
+
+.et-card:first-child {
+    border-bottom: 1px solid #9D94C9;
+}
+
+.et-main-popup-window {
+    background: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.et-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px 5px 20px;
+    flex-wrap: wrap;
+    background: #2A2A2A;
+    color: white;
+    width: 100%;
+}
+
+.section-one {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.section-two {
+    flex: 2;
+    padding: 20px;
+    background: white !important;
+}
+
+.section-three {
+    border-top: 2px solid gray;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.et-main-popup-window {
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.material-card {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin-right: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-box-shadow: 7px 10px 11px -3px rgba(0,0,0,0.5); 
+    box-shadow: 7px 10px 11px -3px rgba(0,0,0,0.5);
+    z-index: 2;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.material-card > img {
+    height: 120px;
+    z-index: 1;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.material-category {
+    display: flex;
+    flex-direction: row;
+}
+
+.et-back-button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    left: 25px;
+}
+
+.et-delete-material {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.et-card-selected {
+    border: 2px solid white;
+    width: 74px;
+    height: 74px;
+}
+
+.et-close-popup-window {
+    transform: translateX(500px);
+    opacity: 0;
+    visibility: hidden; 
+    transition-duration: 0.5s;
+}
+
+.et-choose-style-title {
+    font-size: 20px;
+    color: #9D94C9;
+}
+
+.et-add-ribbon {
+    margin-left: 10px !important;
+}
+
+.et-choosed {
+    background: white;
+    color: #0c0c0c;
+}
+
+.et-button-style {
+    padding: 4px 10px;
+    height: 30px;
+    background: #7EB141;
+    cursor: pointer;
+    color: white;
+    border-radius: 4px;
+}
+
+.clicable-et-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.cart-button-image > img{
+    width: 18px;
+    margin-right: 10px;
+}
+
+.cart-button-image > br {
+    display: none;
+}
+
+@media only screen and (max-width: 806px) {
+    
+    .mobile-only-flex {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #0c0c0c !important;
+    }
+
+    .et-main-popup-window {
+        width: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+    }
+
+    .et-picker-container {
+        width: 100%;
+    }
+
+    .et-card {
+	width: 400px;	
+    }
+   
+    .et-buy-button-wrap {
+        background: #0c0c0c !important;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    
+    .et-card {
+        width: 100%;
+    }
+
+    .et-choose-style-title {
+        font-size: 14px !important;
+    }
+    
+    .et-main-popup-window {
+        width: 100%;
+        transform: translate(-50%, -60%);
+        font-size: 14px !important;
+    }
+
+    .material-card {
+        width: 40px;
+        height: 40px;
+    }
+
+    .et-card p {
+    
+       font-size: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    
+    .et-card {
+        width: 100%;
+    }
+    .et-picker-container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    
+    .et-card {
+        font-size: 12px !important;
+    }
+}

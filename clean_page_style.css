@@ -1,0 +1,15 @@
+.woocommerce-product-gallery, .summary, .entry-summary, .tabs, .wc-tabs  {
+	display: none !important;
+}
+.woocommerce-Tabs-panel > h2:first-child {
+	display: none;
+}
+#inner-body {
+	background: #0c0c0c !important;
+}
+p {
+	margin: 0px !important;
+}
+.elementor-element-4867550 {
+        display: none !important;
+}
