@@ -1,5 +1,7 @@
 setTimeout(function() {
 
+    init_local_storage();
+
     let mode = null;
     let choosedBackSkin = null;
     let choosedCamSkin = null;
@@ -18,6 +20,11 @@ setTimeout(function() {
     let backSkinCard = document.querySelector("#et-back-skin");
     let camSkinCard = document.querySelector("#et-cam-skin");
 
+
+    function init_local_storage(){
+      window.localStorage.removeItem('back_skin');
+      window.localStorage.removeItem('cam_skin');
+    }
 
     function update_local_storage(backskin, camskin){
       window.localStorage.setItem('back_skin', backskin);
