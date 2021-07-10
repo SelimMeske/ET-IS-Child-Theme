@@ -7,8 +7,8 @@ let back_skin = "381";
 let back_and_cam = "382";
 let cam_skin = "383";
 
-console.log("Type of cam skin from local " + typeOf(cam_skin_from_local));
-console.log("Type of back skin from local " + typeOf(back_skin_from_local));
+console.log("Type of cam skin from local " + typeof(cam_skin_from_local));
+console.log("Type of back skin from local " + typeof(back_skin_from_local));
 
 console.log("Vrijednost cam skin " + cam_skin_from_local);
 console.log("Vrijednost back skin " + back_skin_from_local);
