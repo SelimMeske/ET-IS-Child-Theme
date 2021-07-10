@@ -3,15 +3,28 @@ if(window.location.pathname == '/checkout/') {
   document.querySelector('#order_comments').value += window.localStorage.getItem('cam_skin');
 }
 
+let back_skin = "381";
+let back_and_cam = "382";
+let cam_skin = "383";
+
+
+
 setTimeout(function(){
 	if(window.location.pathname == '/product/mobilni-skin-konfigurator/') {
 		document.querySelector('.et-buy-button').addEventListener('click', function() {
-				let back_skin = "381";
-				let back_and_cam = "382";
-				let cam_skin = "383";
 
         let cam_skin_from_local = window.localStorage.getItem("cam_skin");
         let back_skin_from_local = window.localStorage.getItem("back_skin");
+
+        if(True) {
+          console.log("Type of cam skin from local " + typeOf(cam_skin_from_local));
+          console.log("Type of back skin from local " + typeOf(back_skin_from_local));
+
+          console.log("Vrijednost cam skin " + cam_skin_from_local);
+          console.log("Vrijednost back skin " + back_skin_from_local);
+
+          return;
+        }
 
 				if(cam_skin_from_local == "null" && back_skin_from_local == "null"
         || cam_skin_from_local == "" && back_skin_from_local == ""
