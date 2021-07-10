@@ -20,8 +20,8 @@ setTimeout(function() {
 
 
     function update_local_storage(backskin, camskin){
-      window.localStorage.setItem('back_skin', 'backskin');
-      window.localStorage.setItem('cam_skin', 'camskin');
+      window.localStorage.setItem('back_skin', backskin);
+      window.localStorage.setItem('cam_skin', camskin);
     }
 
     //Add mode depending on what did the user choose, back or cam skin.
