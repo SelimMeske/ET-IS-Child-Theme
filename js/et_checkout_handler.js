@@ -24,6 +24,7 @@ setTimeout(function(){
         let back_skin_from_local = window.localStorage.getItem("back_skin");
 
 				if(cam_skin_from_local == "null" && back_skin_from_local == "null"
+        || cam_skin_from_local == null && back_skin_from_local == null
         || cam_skin_from_local == "" && back_skin_from_local == ""
         || cam_skin_from_local == "null" && back_skin_from_local == ""
         || cam_skin_from_local == "" && back_skin_from_local == "null"){
