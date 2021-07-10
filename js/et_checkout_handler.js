@@ -7,6 +7,9 @@ let back_skin = "381";
 let back_and_cam = "382";
 let cam_skin = "383";
 
+let cam_skin_from_local = window.localStorage.getItem("cam_skin");
+let back_skin_from_local = window.localStorage.getItem("back_skin");
+
 console.log("Type of cam skin from local " + typeof(cam_skin_from_local));
 console.log("Type of back skin from local " + typeof(back_skin_from_local));
 
