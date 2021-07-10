@@ -1,4 +1,4 @@
-setTimeout(function(){
+jQuery(document).ready(function() {
 	let all_empty_p_tags = document.querySelectorAll('p');
 
 	for (let i = 0; i < all_empty_p_tags.length; i++) {
@@ -7,4 +7,5 @@ setTimeout(function(){
 		}
 	}
 
-}, 900);
+	document.querySelector('.col-2').style.display = 'none';
+});
