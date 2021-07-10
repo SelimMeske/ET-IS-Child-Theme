@@ -16,7 +16,7 @@ setTimeout(function(){
         let cam_skin_from_local = window.localStorage.getItem("cam_skin");
         let back_skin_from_local = window.localStorage.getItem("back_skin");
 
-        if(True) {
+        if(true) {
           console.log("Type of cam skin from local " + typeOf(cam_skin_from_local));
           console.log("Type of back skin from local " + typeOf(back_skin_from_local));
 
