@@ -9,6 +9,7 @@ function my_custom_scripts() {
     wp_enqueue_script( 'et-checkout-js', get_stylesheet_directory_uri() . '/js/et_checkout_handler.js', array(), rand(1, 100), true );
     if (is_single(323)): wp_enqueue_style('clean-page', get_stylesheet_directory_uri() . '/clean_page_style.css', array(), rand(1, 100), 'all'); endif;
     if (is_single(323)): wp_enqueue_style('et-main-style', get_stylesheet_directory_uri() . '/style.css', array(), rand(1, 100), 'all'); endif;
+    if (is_single(88)): wp_enqueue_style('chart-cleaner', get_stylesheet_directory_uri() . '/chart_cleaner.css', array(), rand(1, 100), 'all'); endif;
 }
 add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
 ?>

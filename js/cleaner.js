@@ -7,8 +7,4 @@ setTimeout(function(){
 		}
 	}
 
-	if(window.location.pathname == '/checkout/') {
-		document.querySelector('.col-2').style.display = 'none';
-	}
-
-}, 1500);
+}, 900);
