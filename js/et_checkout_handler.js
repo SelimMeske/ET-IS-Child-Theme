@@ -39,8 +39,8 @@ setTimeout(function(){
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
 
-          console.log((cam_skin_from_local !== null || cam_skin_from_local !== ""))
-          console.log((back_skin_from_local !== null || back_skin_from_local !== ""))
+          console.log((cam_skin_from_local !== null))
+          console.log((back_skin_from_local !== null))
           console.log(cam_skin_from_local)
           console.log(back_skin_from_local)
           console.log(cam_skin_from_local.typeof())
