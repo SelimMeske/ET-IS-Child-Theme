@@ -26,12 +26,14 @@ setTimeout(function(){
           return;
         }else if(cam_skin_from_local !== 'null' && back_skin_from_local !== 'null') {
           let varPick = variation_determination(camback_variations, currentCartItems);
+          console.log(varPick);
           document.querySelector('.variation_id').value = varPick;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
           return;
         }else if(cam_skin_from_local !== 'null'){
           let varPick = variation_determination(cam_variations, currentCartItems);
+          console.log(varPick);
           document.querySelector('.variation_id').value = varPick;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
@@ -39,6 +41,7 @@ setTimeout(function(){
           return;
         }else if(back_skin_from_local !== 'null'){
           let varPick = variation_determination(back_variations, currentCartItems);
+          console.log(varPick);
           document.querySelector('.variation_id').value = varPick;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
           document.querySelector('.single_add_to_cart_button').click();
