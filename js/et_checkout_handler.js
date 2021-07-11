@@ -56,7 +56,10 @@ setTimeout(function(){
         }else if(back_skin_from_local !== 'null'){
           document.querySelector('.variation_id').value = back_skin;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
-  				document.querySelector('.single_add_to_cart_button').click();
+          setTimeout(function(){
+            document.querySelector('.single_add_to_cart_button').click();
+          }, 5000)
+
           console.log('VARIJACIJA BACK ')
           return;
         }
