@@ -1,5 +1,6 @@
 <?php
 function my_custom_scripts() {
+    wp_enqueue_script( 'cart-items-handler-js', get_stylesheet_directory_uri() . '/js/CartItemsHandler.js', array(), rand(1, 100),true );
     wp_enqueue_script( 'custom-js-enum', get_stylesheet_directory_uri() . '/js/VariationEnum.js', array(), rand(1, 100),true );
     wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/js/CamSkin.js', array(), rand(1, 100),true );
     wp_enqueue_script( 'custom-js-2', get_stylesheet_directory_uri() . '/js/BackSkin.js', array(), rand(1, 100),true );
