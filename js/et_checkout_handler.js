@@ -61,7 +61,7 @@ function variation_determination(var_list, restricted_vars){
   }else {
     for(let i = 0; i < var_list.length; i++) {
       if(!(restricted_vars.includes(var_list[i]))){
-        return i;
+        return var_list[i];
       }
     }
   }
