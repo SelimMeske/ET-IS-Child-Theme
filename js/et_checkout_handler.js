@@ -30,24 +30,27 @@ setTimeout(function(){
 				if(cam_skin_from_local == "null" && back_skin_from_local == "null"
         || cam_skin_from_local == null && back_skin_from_local == null
         || cam_skin_from_local == "" && back_skin_from_local == ""
-        || cam_skin_from_local == "null" && back_skin_from_local == ""
-        || cam_skin_from_local == "" && back_skin_from_local == "null"){
+        || cam_skin_from_local == null && back_skin_from_local == ""
+        || cam_skin_from_local == "" && back_skin_from_local == null){
           alert("Niste odabrali skin, odaberite skin klikom na dugme \"DODAJ\" i odaberite zeljeni skin.");
           return;
         }else if(cam_skin_from_local !== null || cam_skin_from_local !== "" && back_skin_from_local !== null || back_skin_from_local !== "") {
           document.querySelector('.variation_id').value = back_and_cam;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
+          console.log('VARIJACIJA BACK AND CAM ')
           return;
         }else if(cam_skin_from_local !== null || cam_skin_from_local !== ""){
           document.querySelector('.variation_id').value = cam_skin;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
+          console.log('VARIJACIJA CAM ')
           return;
         }else if(back_skin_from_local !== null || back_skin_from_local !== ""){
           document.querySelector('.variation_id').value = back_skin;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
+          console.log('VARIJACIJA BACK ')
           return;
         }
 
