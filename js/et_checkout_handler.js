@@ -41,6 +41,10 @@ setTimeout(function(){
 
           console.log((cam_skin_from_local !== null || cam_skin_from_local !== ""))
           console.log((back_skin_from_local !== null || back_skin_from_local !== ""))
+          console.log(cam_skin_from_local)
+          console.log(back_skin_from_local)
+          console.log(cam_skin_from_local.typeof())
+          console.log(back_skin_from_local.typeof())
           console.log('VARIJACIJA BACK AND CAM ')
           return;
         }else if(cam_skin_from_local !== null || cam_skin_from_local !== ""){
