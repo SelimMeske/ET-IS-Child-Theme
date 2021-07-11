@@ -9,7 +9,8 @@ jQuery.ajax({
     console.log(response.responseJSON)
     let odgovor = response.responseJSON;
     for (let i = 0; i < Object.keys(odgovor).length; i++) {
-      currentCartItems.push(Object.values(odgovor)[i].id);
+      let currentResponseId = Object.values(odgovor)[i].id;
+      currentCartItems.push(currentResponseId.toString());
     }
   }
 });
