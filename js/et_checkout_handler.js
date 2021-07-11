@@ -7,18 +7,8 @@ if(window.location.pathname == '/checkout/') {
   document.querySelector('#order_comments').value = adminMessage;
 }
 
-let back_skin = "381";
-let back_and_cam = "382";
-let cam_skin = "383";
-
 let cam_skin_from_local = window.localStorage.getItem("cam_skin");
 let back_skin_from_local = window.localStorage.getItem("back_skin");
-
-console.log("Type of cam skin from local " + typeof(cam_skin_from_local));
-console.log("Type of back skin from local " + typeof(back_skin_from_local));
-
-console.log("Vrijednost cam skin " + cam_skin_from_local);
-console.log("Vrijednost back skin " + back_skin_from_local);
 
 setTimeout(function(){
 	if(window.location.pathname == '/product/mobilni-skin-konfigurator/') {
@@ -35,26 +25,21 @@ setTimeout(function(){
           alert("Niste odabrali skin, odaberite skin klikom na dugme \"DODAJ\" i odaberite zeljeni skin.");
           return;
         }else if(cam_skin_from_local !== 'null' && back_skin_from_local !== 'null') {
-          document.querySelector('.variation_id').value = back_and_cam;
+          let varPick = variation_determination(camback_variations, currentCartItems);
+          document.querySelector('.variation_id').value = varPick;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
-
-          console.log((cam_skin_from_local !== null))
-          console.log((back_skin_from_local !== null))
-          console.log(cam_skin_from_local)
-          console.log(back_skin_from_local)
-          console.log(cam_skin_from_local.typeof())
-          console.log(back_skin_from_local.typeof())
-          console.log('VARIJACIJA BACK AND CAM ')
           return;
         }else if(cam_skin_from_local !== 'null'){
-          document.querySelector('.variation_id').value = cam_skin;
+          let varPick = variation_determination(cam_variations, currentCartItems);
+          document.querySelector('.variation_id').value = varPick;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
           console.log('VARIJACIJA CAM ')
           return;
         }else if(back_skin_from_local !== 'null'){
-          document.querySelector('.variation_id').value = back_skin;
+          let varPick = variation_determination(back_variations, currentCartItems);
+          document.querySelector('.variation_id').value = varPick;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
           document.querySelector('.single_add_to_cart_button').click();
           console.log('VARIJACIJA BACK ')
@@ -64,3 +49,39 @@ setTimeout(function(){
 		});
 	}
 }, 2100);
+
+
+function variation_determination(var_list, restricted_vars){
+
+  if (arrayCompare(var_list, restricted_vars)){
+    return 00000;
+  }else {
+    for(let i = 0; i < var_list.length; i++) {
+      if(!(restricted_vars.includes(var_list[i]))){
+        return i;
+      }
+    }
+  }
+}
+
+function arrayCompare(_arr1, _arr2) {
+    if (
+      !Array.isArray(_arr1)
+      || !Array.isArray(_arr2)
+      || _arr1.length !== _arr2.length
+      ) {
+        return false;
+      }
+
+    // .concat() to not mutate arguments
+    const arr1 = _arr1.concat().sort();
+    const arr2 = _arr2.concat().sort();
+
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] !== arr2[i]) {
+            return false;
+         }
+    }
+
+    return true;
+}
