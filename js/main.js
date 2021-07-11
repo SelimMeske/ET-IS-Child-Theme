@@ -1,5 +1,7 @@
 setTimeout(function() {
 
+    init_local_storage();
+
     let mode = null;
     let choosedBackSkin = null;
     let choosedCamSkin = null;
@@ -19,9 +21,14 @@ setTimeout(function() {
     let camSkinCard = document.querySelector("#et-cam-skin");
 
 
+    function init_local_storage(){
+      window.localStorage.removeItem('back_skin');
+      window.localStorage.removeItem('cam_skin');
+    }
+
     function update_local_storage(backskin, camskin){
-      window.localStorage.setItem('back_skin', 'backskin');
-      window.localStorage.setItem('cam_skin', 'camskin');
+      window.localStorage.setItem('back_skin', backskin);
+      window.localStorage.setItem('cam_skin', camskin);
     }
 
     //Add mode depending on what did the user choose, back or cam skin.
@@ -135,10 +142,7 @@ setTimeout(function() {
 
     function apply_skin_and_close() {
 
-        let addButtonClone = `
-    <span class="cart-button-image">
-            <img src="http://infinityskins.ba/wp-content/uploads/2021/06/shopping-cart-2.png" alt="">
-    </span>DODAJ`;
+        let addButtonClone = `DODAJ`;
 
         let chooseBackSkinButtonRibbon = backSkinCard.querySelector('.et-add-ribbon');
         let chooseCamSkinButtonRibbon = camSkinCard.querySelector('.et-add-ribbon');
