@@ -3,10 +3,10 @@ if(window.location.pathname == '/checkout/') {
   let kameraSkin =  window.localStorage.getItem('cam_skin');
   let test_our_meta = window.localStorage.getItem("back_skin");
   let adminMessage = 'Korisnik je narucio pozadniski skin: ' + pozadinskiSkin.replace('_', ' ') + ', a skin kamere je: ' + kameraSkin.replace('_', ' ');
-
+  addMetaToLocal();
   document.querySelector('#order_comments').value = adminMessage;
 }
-test();
+
 let cam_skin_from_local = window.localStorage.getItem("cam_skin");
 let back_skin_from_local = window.localStorage.getItem("back_skin");
 let cart_meta = [];
