@@ -16,6 +16,7 @@ jQuery(document).ready(function() {
 
         let cam_skin_from_local = window.localStorage.getItem("cam_skin");
         let back_skin_from_local = window.localStorage.getItem("back_skin");
+        let current_model = document.querySelector("#phone-model").value;
 
 				if(cam_skin_from_local == "null" && back_skin_from_local == "null"
         || cam_skin_from_local == null && back_skin_from_local == null
@@ -29,7 +30,7 @@ jQuery(document).ready(function() {
           let meta_obj_id = document.querySelector('.variation_id').value = varPick;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
-          let meta_obj = new CartMetaObject(meta_obj_id, cam_skin_from_local, back_skin_from_local);
+          let meta_obj = new CartMetaObject(meta_obj_id, cam_skin_from_local, back_skin_from_local, current_model);
           addMetaToLocal(meta_obj.get_object());
           return;
         }else if(cam_skin_from_local !== 'null'){
@@ -37,7 +38,7 @@ jQuery(document).ready(function() {
           let meta_obj_id = document.querySelector('.variation_id').value = varPick;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
-          let meta_obj = new CartMetaObject(meta_obj_id, cam_skin_from_local, back_skin_from_local);
+          let meta_obj = new CartMetaObject(meta_obj_id, cam_skin_from_local, back_skin_from_local, current_model);
           addMetaToLocal(meta_obj.get_object());
           return;
         }else if(back_skin_from_local !== 'null'){
@@ -45,7 +46,7 @@ jQuery(document).ready(function() {
           let meta_obj_id = document.querySelector('.variation_id').value = varPick;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
           document.querySelector('.single_add_to_cart_button').click();
-          let meta_obj = new CartMetaObject(meta_obj_id, cam_skin_from_local, back_skin_from_local);
+          let meta_obj = new CartMetaObject(meta_obj_id, cam_skin_from_local, back_skin_from_local, current_model);
           addMetaToLocal(meta_obj.get_object());
           return;
         }
