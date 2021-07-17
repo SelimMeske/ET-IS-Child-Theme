@@ -4,20 +4,14 @@ function addMetaToLocal(object){
 
   let newMetaList = [];
 
-  if(currentLocalMetaList.length == 0){
-    newMetaList.push(object);
-  }else {
-    for (let i = 0; i < currentLocalMetaList.length; i++) {
-      let currentId = JSON.parse(currentLocalMetaList[i]).id;
-  
-      if(parseInt(currentId) === parseInt(currentNewObjectId)){
-        return;
-      }
-      newMetaList.push(currentLocalMetaList[i]);
-    }
-  }
+  for (let i = 0; i < currentLocalMetaList.length; i++) {
+    let currentId = JSON.parse(currentLocalMetaList[i]).id;
 
-  
+    if(parseInt(currentId) === parseInt(currentNewObjectId)){
+      return;
+    }
+    newMetaList.push(currentLocalMetaList[i]);
+  }
 
   if(!currentNewObjectId){
     return;
