@@ -16,11 +16,11 @@ jQuery.ajax({
       currentCartItems.push(currentResponseId.toString());
 
       if(window.location.pathname == '/cart/'){
-        let all_var_tags = document.querySelectorAll('.variation-Skinvariations > p');
+        let all_var_tags = document.querySelectorAll('dd.variation-Skinvariations > p');
 
         for(let i = 0; i < all_var_tags.length; i++) {
           if(all_var_tags[i].innerText === Object.values(odgovor)[i].meta.variation['Skin variations']){
-            all_var_tags[i].innerText == camMainText;
+            all_var_tags[i].innerText = camMainText;
             console.log('haleluja');
           }
         }
