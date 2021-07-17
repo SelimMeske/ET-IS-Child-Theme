@@ -20,7 +20,7 @@ jQuery.ajax({
         let all_var_tags = document.querySelectorAll('dd.variation-Skinvariations > p');
 
         for(let i = 0; i < all_var_tags.length; i++) {
-          let currentPtagText = all_var_tags[i].innerTex;
+          let currentPtagText = all_var_tags[i].innerText;
           if(currentPtagText === Object.values(odgovor)[i].meta.variation['Skin variations']){
             let currentInCartProductId = Object.values(odgovor)[i].id;
             for(let p = 0; p < customLocalCartMetaObject.length; p++) {
