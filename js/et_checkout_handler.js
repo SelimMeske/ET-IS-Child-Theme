@@ -8,7 +8,7 @@ if(window.location.pathname == '/checkout/') {
 
   document.querySelector('#order_comments').value = adminMessage;
 }
-
+test();
 let cam_skin_from_local = window.localStorage.getItem("cam_skin");
 let back_skin_from_local = window.localStorage.getItem("back_skin");
 let cart_meta = [];
