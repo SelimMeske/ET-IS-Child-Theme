@@ -28,13 +28,14 @@ jQuery.ajax({
               let currentMetaObject = JSON.parse(customLocalCartMetaObject[p]);
 
               if(parseInt(currentInCartProductId) === parseInt(currentMetaObject.id)){
-                console.log("HEY")
                 if(back_variations.includes(toString(currentMetaObject.id))){
+                  console.log("include")
                   currentPtagText = variations_name_mapper[currentPtagText] + ' - Boja: ' + color_variations_mapper[currentMetaObject.backColor];
                 }else if (cam_variations.includes(toString(currentMetaObject.id))) {
+                  console.log("include")
                   currentPtagText = variations_name_mapper[currentPtagText] + ' - Boja: ' + color_variations_mapper[currentMetaObject.camColor];
                 }else if (camback_variations.includes(toString(currentMetaObject.id))) {
-                  console.log('Test')
+                  console.log("include")
                   currentPtagText = variations_name_mapper[currentPtagText] + ' - Pozadinska boja: ' + color_variations_mapper[currentMetaObject.backColor] + ' Boja kamere: ' + color_variations_mapper[currentMetaObject.camColor];
                 }
               }
