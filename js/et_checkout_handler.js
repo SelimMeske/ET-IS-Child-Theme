@@ -16,6 +16,15 @@ jQuery(document).ready(function() {
         let cam_skin_from_local = window.localStorage.getItem("cam_skin");
         let back_skin_from_local = window.localStorage.getItem("back_skin");
         let current_model = document.querySelector("#phone-model").value;
+        let phone_model = document.querySelector("#phone-model");
+
+        if(!current_model) {
+          phone_model.classList.add('model-error-input');
+          setTimeout(function(){
+            phone_model.classList.remove('model-error-input');
+          }, 1100);
+          return;
+        }
 
 				if(cam_skin_from_local == "null" && back_skin_from_local == "null"
         || cam_skin_from_local == null && back_skin_from_local == null
