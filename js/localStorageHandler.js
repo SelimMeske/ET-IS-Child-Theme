@@ -28,6 +28,8 @@ function cleanMetaDataInLocal(APIlist){
 
   for(let i = 0; i < Object.keys(APIlist).length; i++) {
     for(let p = 0; p < currentLocalMetaList.length; p++) {
+      console.log(Object.values(APIlist)[i].id);
+      console.log(parseInt(currentLocalMetaList[p].id));
       if(parseInt(Object.values(APIlist)[i].id) === parseInt(currentLocalMetaList[p].id)){
         cleanList.push(currentLocalMetaList[p]);
       }
