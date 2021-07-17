@@ -1,4 +1,7 @@
 let currentCartItems = [];
+let backMainText = 'Pozadniski skin';
+let camMainText = 'Skin kamere';
+let bcMainText = 'Pozadniski + kamera skin';
 
 jQuery.ajax({
   url: "https://infinityskins.ba/wp-json/cocart/v2/cart/items",
@@ -15,11 +18,12 @@ jQuery.ajax({
       if(window.location.pathname == '/cart/'){
         let all_var_tags = document.querySelectorAll('.variation-Skinvariations > p');
 
-        //for(let i = 0; i < all_var_tags.length; i++) {
-          //if(all_var_tags[i].innerText == Object.values(odgovor)[i].meta.variation)
-        //}
+        for(let i = 0; i < all_var_tags.length; i++) {
+          if(all_var_tags[i].innerText == Object.values(odgovor)[i].meta.variation['Skin variations']){
+            all_var_tags[i].innerText == camMainText;
+          }
+        }
 
-        console.log(Object.values(odgovor)[i].meta.variation['Skin variations']);
       }
     }
   }
