@@ -32,7 +32,7 @@ jQuery(document).ready(function() {
   				document.querySelector('.single_add_to_cart_button').click();
           let meta_obj = new CartMetaObject(meta_obj_id, cam_skin_from_local, back_skin_from_local);
           cart_meta.push(meta_obj.get_object());
-          window.localStorage.setItem("cart_meta", cart_meta);
+          window.localStorage.setItem("cart_meta", JSON.stringify(cart_meta));
           return;
         }else if(cam_skin_from_local !== 'null'){
           let varPick = variation_determination(cam_variations, currentCartItems);
@@ -41,7 +41,7 @@ jQuery(document).ready(function() {
   				document.querySelector('.single_add_to_cart_button').click();
           let meta_obj = new CartMetaObject(meta_obj_id, cam_skin_from_local, back_skin_from_local);
           cart_meta.push(meta_obj.get_object());
-          window.localStorage.setItem("cart_meta", cart_meta);
+          window.localStorage.setItem("cart_meta", JSON.stringify(cart_meta));
           return;
         }else if(back_skin_from_local !== 'null'){
           let varPick = variation_determination(back_variations, currentCartItems);
@@ -50,7 +50,7 @@ jQuery(document).ready(function() {
           document.querySelector('.single_add_to_cart_button').click();
           let meta_obj = new CartMetaObject(meta_obj_id, cam_skin_from_local, back_skin_from_local);
           cart_meta.push(meta_obj.get_object());
-          window.localStorage.setItem("cart_meta", cart_meta);
+          window.localStorage.setItem("cart_meta", JSON.stringify(cart_meta));
           return;
         }
 
