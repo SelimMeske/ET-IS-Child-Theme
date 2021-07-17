@@ -1,5 +1,6 @@
 <?php
 function my_custom_scripts() {
+  wp_enqueue_script( 'local-storage-handler', get_stylesheet_directory_uri() . '/js/localStorageHandler.js', array('jquery'), rand(100, 1000) . '.' . rand(0, 1000),true );
     wp_enqueue_script( 'cart-meta-object', get_stylesheet_directory_uri() . '/js/CartMetaObject.js', array('jquery'), rand(100, 1000) . '.' . rand(0, 1000),true );
     wp_enqueue_script( 'cart-items-handler-js', get_stylesheet_directory_uri() . '/js/CartItemsHandler.js', array('jquery'), rand(100, 1000) . '.' . rand(0, 1000),true );
     wp_enqueue_script( 'custom-js-enum', get_stylesheet_directory_uri() . '/js/VarationEnum.js', array(), rand(100, 1000) . '.' . rand(0, 1000),true );
