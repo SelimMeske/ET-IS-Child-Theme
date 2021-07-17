@@ -1,4 +1,4 @@
-setTimeout(function() {
+jQuery(document).ready(function() {
 
     init_local_storage();
 
@@ -189,4 +189,4 @@ setTimeout(function() {
         }
     }
 
-}, 2000);
+});

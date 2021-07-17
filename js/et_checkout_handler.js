@@ -10,7 +10,7 @@ if(window.location.pathname == '/checkout/') {
 let cam_skin_from_local = window.localStorage.getItem("cam_skin");
 let back_skin_from_local = window.localStorage.getItem("back_skin");
 
-setTimeout(function(){
+jQuery(document).ready(function() {
 	if(window.location.pathname == '/product/mobilni-skin-konfigurator/') {
 		document.querySelector('.et-buy-button').addEventListener('click', function() {
 
@@ -51,7 +51,7 @@ setTimeout(function(){
 
 		});
 	}
-}, 2100);
+});
 
 
 function variation_determination(var_list, restricted_vars){

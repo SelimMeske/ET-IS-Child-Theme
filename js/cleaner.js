@@ -6,6 +6,6 @@ jQuery(document).ready(function() {
 			all_empty_p_tags[i].remove();
 		}
 	}
-
+	document.querySelectorAll('br').remove();
 	document.querySelector('.col-2').style.display = 'none';
 });
