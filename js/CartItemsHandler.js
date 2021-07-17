@@ -24,8 +24,10 @@ jQuery.ajax({
           if(currentPtagText === Object.values(odgovor)[i].meta.variation['Skin variations']){
             let currentInCartProductId = Object.values(odgovor)[i].id;
             for(let p = 0; p < customLocalCartMetaObject.length; p++) {
-              console.log(toString(parseInt(currentMetaObject.id)));
+
               let currentMetaObject = JSON.parse(customLocalCartMetaObject[p]);
+
+              console.log(toString(parseInt(currentMetaObject.id)));
               if(parseInt(currentInCartProductId) === parseInt(currentMetaObject.id)){
                 if(back_variations.includes(toString(parseInt(currentMetaObject.id)))){
                   currentPtagText = variations_name_mapper[currentPtagText] + ' - Boja: ' + color_variations_mapper[currentMetaObject.backColor];
