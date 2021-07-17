@@ -3,7 +3,8 @@ if(window.location.pathname == '/checkout/') {
   let kameraSkin =  window.localStorage.getItem('cam_skin');
   let test_our_meta = window.localStorage.getItem("back_skin");
 
-  console.log(test_our_meta\n);
+  console.log(test_our_meta);
+  console.log('\n');
   console.log(typeof test_our_meta);
   let adminMessage = 'Korisnik je narucio pozadniski skin: ' + pozadinskiSkin.replace('_', ' ') + ', a skin kamere je: ' + kameraSkin.replace('_', ' ');
   document.querySelector('#order_comments').value = adminMessage;
