@@ -27,13 +27,12 @@ jQuery.ajax({
 
               let currentMetaObject = JSON.parse(customLocalCartMetaObject[p]);
 
-              console.log(currentMetaObject.id);
               if(parseInt(currentInCartProductId) === parseInt(currentMetaObject.id)){
-                if(back_variations.includes(toString(parseInt(currentMetaObject.id)))){
+                if(back_variations.includes(toString(currentMetaObject.id))){
                   currentPtagText = variations_name_mapper[currentPtagText] + ' - Boja: ' + color_variations_mapper[currentMetaObject.backColor];
-                }else if (cam_variations.includes(toString(parseInt(currentMetaObject.id)))) {
+                }else if (cam_variations.includes(toString(currentMetaObject.id))) {
                   currentPtagText = variations_name_mapper[currentPtagText] + ' - Boja: ' + color_variations_mapper[currentMetaObject.camColor];
-                }else if (camback_variations.includes(toString(parseInt(currentMetaObject.id)))) {
+                }else if (camback_variations.includes(toString(currentMetaObject.id))) {
                   console.log('Test')
 
                   currentPtagText = variations_name_mapper[currentPtagText] + ' - Pozadinska boja: ' + color_variations_mapper[currentMetaObject.backColor] + ' Boja kamere: ' + color_variations_mapper[currentMetaObject.camColor];
