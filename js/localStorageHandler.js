@@ -18,7 +18,20 @@ function addMetaToLocal(object){
   }else{
     newMetaList.push(object);
   }
-
-
   window.localStorage.setItem("cart_meta", JSON.stringify(newMetaList));
+}
+
+function cleanMetaDataInLocal(APIlist){
+
+  let currentLocalMetaList = JSON.parse(window.localStorage.getItem('cart_meta'));
+  let cleanList = [];
+
+  for(let i = 0; i < APIlist.length; i++) {
+    for(let p = 0; p < currentLocalMetaList.length; p++) {
+      if(parseInt(APIlist[i].id) === parseInt(currentLocalMetaList[p].id)){
+        cleanList.push(currentLocalMetaList[p]);
+      }
+    }
+  }
+  window.localStorage.setItem("cart_meta", JSON.stringify(cleanList));
 }

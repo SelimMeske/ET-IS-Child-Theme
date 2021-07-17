@@ -14,8 +14,10 @@ jQuery.ajax({
   contentType: "application/json; charset=utf-8",
   complete: function (response) {
     let odgovor = response.responseJSON;
+
+    cleanMetaDataInLocal(odgovor);
+    
     for (let i = 0; i < Object.keys(odgovor).length; i++) {
-      console.log(camback_variations);
       let customLocalCartMetaObject = JSON.parse(window.localStorage.getItem('cart_meta'));
       let currentResponseId = Object.values(odgovor)[i].id;
       currentCartItems.push(currentResponseId.toString());
@@ -32,13 +34,10 @@ jQuery.ajax({
               let currentMetaObject = JSON.parse(customLocalCartMetaObject[p]);
               if(parseInt(currentInCartProductId) === parseInt(currentMetaObject.id)){
                 if(back_variations.includes('' + currentMetaObject.id)){
-                  console.log("include")
                   all_var_tags[i].innerText = variations_name_mapper[currentPtagText] + ' - Boja: ' + color_variations_mapper[currentMetaObject.backColor];
                 }else if (cam_variations.includes('' + currentMetaObject.id)) {
-                  console.log("include")
                   all_var_tags[i].innerText = variations_name_mapper[currentPtagText] + ' - Boja: ' + color_variations_mapper[currentMetaObject.camColor];
                 }else if (camback_variations.includes('' + currentMetaObject.id)) {
-                  console.log("include")
                   all_var_tags[i].innerText = variations_name_mapper[currentPtagText] + ' - Pozadinska boja: ' + color_variations_mapper[currentMetaObject.backColor] + ' Boja kamere: ' + color_variations_mapper[currentMetaObject.camColor];
                 }
               }
