@@ -10,6 +10,5 @@ jQuery(document).ready(function() {
 	for(let p = 0; p < all_brs.length; p++){
 		all_brs[p].remove();
 	}
-	console.log(all_brs);
 	document.querySelector('.col-2').style.display = 'none';
 });

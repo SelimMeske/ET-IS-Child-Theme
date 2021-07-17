@@ -2,17 +2,16 @@ if(window.location.pathname == '/checkout/') {
   let pozadinskiSkin = window.localStorage.getItem('back_skin');
   let kameraSkin =  window.localStorage.getItem('cam_skin');
   let test_our_meta = window.localStorage.getItem("back_skin");
-
-  console.log(test_our_meta);
-  console.log('\n');
-  console.log(typeof test_our_meta);
   let adminMessage = 'Korisnik je narucio pozadniski skin: ' + pozadinskiSkin.replace('_', ' ') + ', a skin kamere je: ' + kameraSkin.replace('_', ' ');
+
+  console.log(JSON.parse(localStorage.getItem("cart_meta")));
+
   document.querySelector('#order_comments').value = adminMessage;
 }
 
 let cam_skin_from_local = window.localStorage.getItem("cam_skin");
 let back_skin_from_local = window.localStorage.getItem("back_skin");
-let cart_meta = {'test': 'odgovor', 'test 2': 'odgovor 2'};
+let cart_meta = [];
 
 jQuery(document).ready(function() {
 	if(window.location.pathname == '/product/mobilni-skin-konfigurator/') {
@@ -30,22 +29,27 @@ jQuery(document).ready(function() {
           return;
         }else if(cam_skin_from_local !== 'null' && back_skin_from_local !== 'null') {
           let varPick = variation_determination(camback_variations, currentCartItems);
-          document.querySelector('.variation_id').value = varPick;
+          let meta_obj_id = document.querySelector('.variation_id').value = varPick;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
+          let meta_obj = new CartMetaObject(meta_obj_id, choosedCamSkin, choosedBackSkin);
+          window.localStorage.setItem("cart_meta", meta_obj);
           return;
         }else if(cam_skin_from_local !== 'null'){
           let varPick = variation_determination(cam_variations, currentCartItems);
-          document.querySelector('.variation_id').value = varPick;
+          let meta_obj_id = document.querySelector('.variation_id').value = varPick;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
-          window.localStorage.setItem("cart_meta", cart_meta);
+          let meta_obj = new CartMetaObject(meta_obj_id, choosedCamSkin, choosedBackSkin);
+          window.localStorage.setItem("cart_meta", meta_obj);
           return;
         }else if(back_skin_from_local !== 'null'){
           let varPick = variation_determination(back_variations, currentCartItems);
-          document.querySelector('.variation_id').value = varPick;
+          let meta_obj_id = document.querySelector('.variation_id').value = varPick;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
           document.querySelector('.single_add_to_cart_button').click();
+          let meta_obj = new CartMetaObject(meta_obj_id, choosedCamSkin, choosedBackSkin);
+          window.localStorage.setItem("cart_meta", meta_obj);
           return;
         }
 
