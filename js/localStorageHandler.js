@@ -13,7 +13,12 @@ function addMetaToLocal(object){
     newMetaList.push(currentLocalMetaList[i]);
   }
 
-  newMetaList.push(object);
+  if(!currentNewObjectId){
+    return;
+  }else{
+    newMetaList.push(object);
+  }
+
 
   window.localStorage.setItem("cart_meta", JSON.stringify(newMetaList));
 }
