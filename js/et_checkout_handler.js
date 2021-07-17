@@ -3,14 +3,13 @@ if(window.location.pathname == '/checkout/') {
   let kameraSkin =  window.localStorage.getItem('cam_skin');
   let test_our_meta = window.localStorage.getItem("back_skin");
   let adminMessage = 'Korisnik je narucio pozadniski skin: ' + pozadinskiSkin.replace('_', ' ') + ', a skin kamere je: ' + kameraSkin.replace('_', ' ');
-  console.log(addMetaToLocal("Malo zavarat"));
   document.querySelector('#order_comments').value = adminMessage;
 }
 
 let cam_skin_from_local = window.localStorage.getItem("cam_skin");
 let back_skin_from_local = window.localStorage.getItem("back_skin");
 let cart_meta = [];
-
+addMetaToLocal("Malo zavarat");
 jQuery(document).ready(function() {
 	if(window.location.pathname == '/product/mobilni-skin-konfigurator/') {
 		document.querySelector('.et-buy-button').addEventListener('click', function() {
