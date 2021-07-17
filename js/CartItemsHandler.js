@@ -19,8 +19,9 @@ jQuery.ajax({
         let all_var_tags = document.querySelectorAll('.variation-Skinvariations > p');
 
         for(let i = 0; i < all_var_tags.length; i++) {
-          if(all_var_tags[i].innerText == Object.values(odgovor)[i].meta.variation['Skin variations']){
+          if(all_var_tags[i].innerText === Object.values(odgovor)[i].meta.variation['Skin variations']){
             all_var_tags[i].innerText == camMainText;
+            console.log('haleluja');
           }
         }
 
