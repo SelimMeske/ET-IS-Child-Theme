@@ -6,10 +6,14 @@ function addMetaToLocal(object){
 
   for (let i = 0; i < currentLocalMetaList.length; i++) {
     let currentId = JSON.parse(currentLocalMetaList[i]).id;
-    if(!parseInt(currentId) == parseInt(currentNewObjectId)){
+    console.log(parseInt(currentId));
+    console.log(parseInt(currentNewObjectId))
+
+    if(!parseInt(currentId) === parseInt(currentNewObjectId)){
       newMetaList.push(currentLocalMetaList[i]);
+      console.log("los nikakav");
     }
-    newMetaList.push(JSON.stringify(object));
+    newMetaList.push(object);
   }
 
   window.localStorage.setItem("cart_meta", JSON.stringify(newMetaList));
