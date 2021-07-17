@@ -12,6 +12,8 @@ jQuery.ajax({
     console.log(response.responseJSON)
     let odgovor = response.responseJSON;
     for (let i = 0; i < Object.keys(odgovor).length; i++) {
+
+      let customLocalCartMetaObject = JSON.parse(window.localStorage.getItem('cart_meta'));
       let currentResponseId = Object.values(odgovor)[i].id;
       currentCartItems.push(currentResponseId.toString());
 
@@ -20,8 +22,13 @@ jQuery.ajax({
 
         for(let i = 0; i < all_var_tags.length; i++) {
           if(all_var_tags[i].innerText === Object.values(odgovor)[i].meta.variation['Skin variations']){
-            all_var_tags[i].innerText = camMainText;
-            console.log('haleluja');
+            let currentInCartProductId = Object.values(odgovor)[i].id;
+            for(let p = 0; p < customLocalCartMetaObject.length; p++) {
+              let currentMetaObject = JSON.parse(customLocalCartMetaObject[p]);
+              if(parseInt(currentInCartProductId) === parseInt(currentMetaObject.id)){
+                all_var_tags[i].innerText = variations_name_mapper[all_var_tags[i].innerText];
+              }
+            }
           }
         }
 
