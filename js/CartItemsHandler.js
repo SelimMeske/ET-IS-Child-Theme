@@ -20,12 +20,19 @@ jQuery.ajax({
         let all_var_tags = document.querySelectorAll('dd.variation-Skinvariations > p');
 
         for(let i = 0; i < all_var_tags.length; i++) {
-          if(all_var_tags[i].innerText === Object.values(odgovor)[i].meta.variation['Skin variations']){
+          let currentPtagText = all_var_tags[i].innerTex;
+          if(currentPtagText === Object.values(odgovor)[i].meta.variation['Skin variations']){
             let currentInCartProductId = Object.values(odgovor)[i].id;
             for(let p = 0; p < customLocalCartMetaObject.length; p++) {
               let currentMetaObject = JSON.parse(customLocalCartMetaObject[p]);
               if(parseInt(currentInCartProductId) === parseInt(currentMetaObject.id)){
-                all_var_tags[i].innerText = variations_name_mapper[all_var_tags[i].innerText] + '-' + color_variations_mapper[currentMetaObject.backColor];
+                if(back_variations.includes(toString(parseInt(currentMetaObject.id)))){
+                  currentPtagText = variations_name_mapper[currentPtagText] + ' - Boja: ' + color_variations_mapper[currentMetaObject.backColor];
+                }else if (cam_variations.includes(toString(parseInt(currentMetaObject.id)))) {
+                  currentPtagText = variations_name_mapper[currentPtagText] + ' - Boja: ' + color_variations_mapper[currentMetaObject.camColor];
+                }else if (camback_variations.includes(toString(parseInt(currentMetaObject.id)))) {
+                  currentPtagText = variations_name_mapper[currentPtagText] + ' - Pozadinska boja: ' + color_variations_mapper[currentMetaObject.backColor] + ' Boja kamere: ' + color_variations_mapper[currentMetaObject.camColor];
+                }
               }
             }
           }
