@@ -19,7 +19,7 @@ jQuery.ajax({
           //if(all_var_tags[i].innerText == Object.values(odgovor)[i].meta.variation)
         //}
 
-        console.log(Object.values(odgovor)[i].meta.variation);
+        console.log(Object.values(odgovor)[i].meta.variation['Skin variations']);
       }
     }
   }
