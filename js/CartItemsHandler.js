@@ -27,7 +27,7 @@ jQuery.ajax({
 
               let currentMetaObject = JSON.parse(customLocalCartMetaObject[p]);
 
-              console.log(toString(parseInt(currentMetaObject.id)));
+              console.log(currentMetaObject.id);
               if(parseInt(currentInCartProductId) === parseInt(currentMetaObject.id)){
                 if(back_variations.includes(toString(parseInt(currentMetaObject.id)))){
                   currentPtagText = variations_name_mapper[currentPtagText] + ' - Boja: ' + color_variations_mapper[currentMetaObject.backColor];
