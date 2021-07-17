@@ -9,7 +9,6 @@ jQuery.ajax({
   dataType: "json",
   contentType: "application/json; charset=utf-8",
   complete: function (response) {
-    console.log(response.responseJSON)
     let odgovor = response.responseJSON;
     for (let i = 0; i < Object.keys(odgovor).length; i++) {
 
@@ -26,7 +25,7 @@ jQuery.ajax({
             for(let p = 0; p < customLocalCartMetaObject.length; p++) {
               let currentMetaObject = JSON.parse(customLocalCartMetaObject[p]);
               if(parseInt(currentInCartProductId) === parseInt(currentMetaObject.id)){
-                all_var_tags[i].innerText = variations_name_mapper[all_var_tags[i].innerText];
+                all_var_tags[i].innerText = variations_name_mapper[all_var_tags[i].innerText] + '-' + color_variations_mapper[currentMetaObject.backColor];
               }
             }
           }

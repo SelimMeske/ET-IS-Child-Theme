@@ -41,3 +41,11 @@ let variations_name_mapper = {
   "back 3": backMessage,
   "back 4": backMessage,
 }
+
+let color_variations_mapper = {
+  "carbon_red": "Crveni karbon",
+  "carbon_black": "Crni karbon",
+  "carbon_gray": "Sivi karbon",
+  "carbon_yellow": "Žuti karbon",
+  "carbon_white": "Bijeli karbon",
+}
