@@ -26,7 +26,7 @@ jQuery.ajax({
             for(let p = 0; p < customLocalCartMetaObject.length; p++) {
 
               let currentMetaObject = JSON.parse(customLocalCartMetaObject[p]);
-
+              console.log(toString(currentMetaObject.id));
               if(parseInt(currentInCartProductId) === parseInt(currentMetaObject.id)){
                 if(back_variations.includes(toString(currentMetaObject.id))){
                   console.log("include")
