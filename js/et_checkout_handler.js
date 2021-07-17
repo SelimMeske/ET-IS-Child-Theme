@@ -4,8 +4,6 @@ if(window.location.pathname == '/checkout/') {
   let test_our_meta = window.localStorage.getItem("back_skin");
   let adminMessage = 'Korisnik je narucio pozadniski skin: ' + pozadinskiSkin.replace('_', ' ') + ', a skin kamere je: ' + kameraSkin.replace('_', ' ');
 
-  console.log(JSON.parse(localStorage.getItem("cart_meta")));
-
   document.querySelector('#order_comments').value = adminMessage;
 }
 test();
@@ -33,7 +31,8 @@ jQuery(document).ready(function() {
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
           let meta_obj = new CartMetaObject(meta_obj_id, cam_skin_from_local, back_skin_from_local);
-          window.localStorage.setItem("cart_meta", meta_obj.get_object());
+          cart_meta.push(meta_obj.get_object());
+          window.localStorage.setItem("cart_meta", cart_meta);
           return;
         }else if(cam_skin_from_local !== 'null'){
           let varPick = variation_determination(cam_variations, currentCartItems);
@@ -41,7 +40,8 @@ jQuery(document).ready(function() {
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
           let meta_obj = new CartMetaObject(meta_obj_id, cam_skin_from_local, back_skin_from_local);
-          window.localStorage.setItem("cart_meta", meta_obj.get_object());
+          cart_meta.push(meta_obj.get_object());
+          window.localStorage.setItem("cart_meta", cart_meta);
           return;
         }else if(back_skin_from_local !== 'null'){
           let varPick = variation_determination(back_variations, currentCartItems);
@@ -49,7 +49,8 @@ jQuery(document).ready(function() {
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
           document.querySelector('.single_add_to_cart_button').click();
           let meta_obj = new CartMetaObject(meta_obj_id, cam_skin_from_local, back_skin_from_local);
-          window.localStorage.setItem("cart_meta", meta_obj.get_object());
+          cart_meta.push(meta_obj.get_object());
+          window.localStorage.setItem("cart_meta", cart_meta);
           return;
         }
 
