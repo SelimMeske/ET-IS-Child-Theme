@@ -1,14 +1,17 @@
 if(window.location.pathname == '/checkout/') {
   let pozadinskiSkin = window.localStorage.getItem('back_skin');
   let kameraSkin =  window.localStorage.getItem('cam_skin');
+  let test_our_meta = window.localStorage.getItem("back_skin");
 
+  console.log(test_our_meta\n);
+  console.log(typeof test_our_meta);
   let adminMessage = 'Korisnik je narucio pozadniski skin: ' + pozadinskiSkin.replace('_', ' ') + ', a skin kamere je: ' + kameraSkin.replace('_', ' ');
-
   document.querySelector('#order_comments').value = adminMessage;
 }
 
 let cam_skin_from_local = window.localStorage.getItem("cam_skin");
 let back_skin_from_local = window.localStorage.getItem("back_skin");
+let cart_meta = {'test': 'odgovor', 'test 2': 'odgovor 2'};
 
 jQuery(document).ready(function() {
 	if(window.location.pathname == '/product/mobilni-skin-konfigurator/') {
@@ -26,26 +29,22 @@ jQuery(document).ready(function() {
           return;
         }else if(cam_skin_from_local !== 'null' && back_skin_from_local !== 'null') {
           let varPick = variation_determination(camback_variations, currentCartItems);
-          console.log(varPick);
           document.querySelector('.variation_id').value = varPick;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
           return;
         }else if(cam_skin_from_local !== 'null'){
           let varPick = variation_determination(cam_variations, currentCartItems);
-          console.log(varPick);
           document.querySelector('.variation_id').value = varPick;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
-          console.log('VARIJACIJA CAM ')
+          window.localStorage.setItem("cart_meta", cart_meta);
           return;
         }else if(back_skin_from_local !== 'null'){
           let varPick = variation_determination(back_variations, currentCartItems);
-          console.log(varPick);
           document.querySelector('.variation_id').value = varPick;
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
           document.querySelector('.single_add_to_cart_button').click();
-          console.log('VARIJACIJA BACK ')
           return;
         }
 
