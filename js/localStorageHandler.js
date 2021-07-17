@@ -26,9 +26,9 @@ function cleanMetaDataInLocal(APIlist){
   let currentLocalMetaList = JSON.parse(window.localStorage.getItem('cart_meta'));
   let cleanList = [];
 
-  for(let i = 0; i < APIlist.length; i++) {
+  for(let i = 0; i < Object.keys(APIlist).length; i++) {
     for(let p = 0; p < currentLocalMetaList.length; p++) {
-      if(parseInt(APIlist[i].id) === parseInt(currentLocalMetaList[p].id)){
+      if(parseInt(Object.values(APIlist)[i].id) === parseInt(currentLocalMetaList[p].id)){
         cleanList.push(currentLocalMetaList[p]);
       }
     }

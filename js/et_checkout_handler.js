@@ -1,6 +1,7 @@
 if(window.location.pathname == '/checkout/') {
   let pozadinskiSkin = window.localStorage.getItem('back_skin');
   let kameraSkin =  window.localStorage.getItem('cam_skin');
+  //let adminMessage = 
   document.querySelector('#order_comments').value = adminMessage;
 }
 
