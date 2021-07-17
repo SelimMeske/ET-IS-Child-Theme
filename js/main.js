@@ -26,7 +26,7 @@ jQuery(document).ready(function() {
       window.localStorage.removeItem('cam_skin');
 
       if(!window.localStorage.getItem('cart_meta')){
-        window.localStorage.setItem("cart_meta");
+        window.localStorage.setItem("cart_meta", JSON.stringify([]));
       }
     }
 
