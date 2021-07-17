@@ -5,7 +5,7 @@ function addMetaToLocal(object){
   let newMetaList = [];
 
   if(currentLocalMetaList.length == 0){
-    newMetaList.push(currentLocalMetaList[i]);
+    newMetaList.push(object);
   }else {
     for (let i = 0; i < currentLocalMetaList.length; i++) {
       let currentId = JSON.parse(currentLocalMetaList[i]).id;
