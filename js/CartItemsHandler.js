@@ -29,13 +29,13 @@ jQuery.ajax({
               if(parseInt(currentInCartProductId) === parseInt(currentMetaObject.id)){
                 if(back_variations.includes('' + currentMetaObject.id)){
                   console.log("include")
-                  currentPtagText = variations_name_mapper[currentPtagText] + ' - Boja: ' + color_variations_mapper[currentMetaObject.backColor];
+                  all_var_tags[i].innerText = variations_name_mapper[currentPtagText] + ' - Boja: ' + color_variations_mapper[currentMetaObject.backColor];
                 }else if (cam_variations.includes('' + currentMetaObject.id)) {
                   console.log("include")
-                  currentPtagText = variations_name_mapper[currentPtagText] + ' - Boja: ' + color_variations_mapper[currentMetaObject.camColor];
+                  all_var_tags[i].innerText = variations_name_mapper[currentPtagText] + ' - Boja: ' + color_variations_mapper[currentMetaObject.camColor];
                 }else if (camback_variations.includes('' + currentMetaObject.id)) {
                   console.log("include")
-                  currentPtagText = variations_name_mapper[currentPtagText] + ' - Pozadinska boja: ' + color_variations_mapper[currentMetaObject.backColor] + ' Boja kamere: ' + color_variations_mapper[currentMetaObject.camColor];
+                  all_var_tags[i].innerText = variations_name_mapper[currentPtagText] + ' - Pozadinska boja: ' + color_variations_mapper[currentMetaObject.backColor] + ' Boja kamere: ' + color_variations_mapper[currentMetaObject.camColor];
                 }
               }
             }
