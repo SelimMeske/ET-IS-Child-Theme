@@ -23,8 +23,7 @@ jQuery.ajax({
 
     for (let o = 0; o < remove_buttons.length; o++) {
       remove_buttons[o].addEventListener('click', function(){
-        location.reload();
-        return false;
+        //Implementation in progress
       });
     }
 
