@@ -16,4 +16,16 @@ function my_custom_scripts() {
     if (is_single(88)): wp_enqueue_style('chart-cleaner', get_stylesheet_directory_uri() . '/chart_cleaner.css', array(), rand(100, 1000) . '.' . rand(0, 1000), 'all'); endif;
 }
 add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
+
+
+function add_my_field() { ?>
+
+<div class="my-field">
+    <input type="text" name="my-filed" value=''>
+</div>
+
+<?php }
+
+add_action('woocommerce_before_add_to_cart_button', 'add_my_field')
+
 ?>
