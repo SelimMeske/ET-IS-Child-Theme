@@ -36,6 +36,10 @@ jQuery(document).ready(function() {
         }else if(cam_skin_from_local !== 'null' && back_skin_from_local !== 'null') {
           let varPick = variation_determination(camback_variations, currentCartItems);
           let meta_obj_id = document.querySelector('.variation_id').value = varPick;
+          
+          document.querySelector('#back-skin-material').value = back_skin_from_local;
+          document.querySelector('#cam-skin-material').value = cam_skin_from_local;
+
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
           let meta_obj = new CartMetaObject(meta_obj_id, back_skin_from_local, cam_skin_from_local, current_model);
@@ -44,6 +48,9 @@ jQuery(document).ready(function() {
         }else if(cam_skin_from_local !== 'null'){
           let varPick = variation_determination(cam_variations, currentCartItems);
           let meta_obj_id = document.querySelector('.variation_id').value = varPick;
+
+          document.querySelector('#cam-skin-material').value = cam_skin_from_local;
+
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
           let meta_obj = new CartMetaObject(meta_obj_id, back_skin_from_local, cam_skin_from_local, current_model);
@@ -52,6 +59,9 @@ jQuery(document).ready(function() {
         }else if(back_skin_from_local !== 'null'){
           let varPick = variation_determination(back_variations, currentCartItems);
           let meta_obj_id = document.querySelector('.variation_id').value = varPick;
+
+          document.querySelector('#back-skin-material').value = back_skin_from_local;
+
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
           document.querySelector('.single_add_to_cart_button').click();
           let meta_obj = new CartMetaObject(meta_obj_id, back_skin_from_local, cam_skin_from_local, current_model);
