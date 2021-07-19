@@ -16,7 +16,7 @@ jQuery.ajax({
     let odgovor = response.responseJSON;
     let remove_buttons = document.querySelectorAll('.remove');
 
-
+    console.log(odgovor);
     cleanMetaDataInLocal(odgovor);
 
     refresh_names(odgovor);
