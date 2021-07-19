@@ -46,7 +46,7 @@ function add_skin_to_cart_data($cart_item, $product_id) {
     return $cart_item;
 }
 
-add_action('woocommerce_add_order_item_meta', '', 10, 2);
+add_action('woocommerce_add_order_item_meta', 'save_skin_data', 10, 2);
 function save_skin_data($item_id, $values) {
     if(!empty($values['back_skin'])) {
         wc_add_order_item_meta( $item_id, 'Back Skin Material', $values['back_skin'], true );
