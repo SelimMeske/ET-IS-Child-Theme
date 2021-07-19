@@ -66,4 +66,14 @@ function show_in_table($cart_item, $order_item){
     return $cart_item;
 }
 
+add_action('woocommerce_after_cart_item_name', 'add_c_f');
+
+function add_c_f() {
+    ?>
+
+    <input type="text" name="noname">
+
+    <?php
+}
+
 ?>
