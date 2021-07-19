@@ -7,5 +7,3 @@ function add_my_field() { ?>
 </div>
 
 <?php }
-
-add_action('woocommerce_before_add_to_cart_button', 'add_my_field')
