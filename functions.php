@@ -69,9 +69,13 @@ function show_in_table($cart_item, $order_item){
 add_action('woocommerce_after_cart_item_name', 'add_c_f');
 
 function add_c_f() {
+
+    if(isset($order_item['back_skin'])){
+        $mmdata = $order_item['back_skin'];
+    }
     ?>
 
-    <input type="text" name="noname">
+    <input type="text" name="noname" value="<?php echo $mmdata ?>">
 
     <?php
 }
