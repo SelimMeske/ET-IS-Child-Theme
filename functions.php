@@ -18,14 +18,14 @@ function my_custom_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
 
+// Add input fields
 add_action('woocommerce_before_add_to_cart_button', 'hidden_input_field');
-
 function hidden_input_field() { ?>
     <input type="text" id="back-skin-material" name="back-skin-material" value=''>
     <input type="text" id="cam-skin-material" name="cam-skin-material" value=''>
-} <?php
+<?php }
 
-
+// Add error handler
 add_filter('woocommerce_add_to_cart_validation', 'no_skin_error', 10, 3);
 function no_skin_error($passed, $product_id, $qty) {
     if(isset($_POST['back-skin-material']) && isset($_POST['cam-skin-material']) && sanitize_text_field($_POST['back-skin-material']) && sanitize_text_field($_POST['cam-skin-material'])  == '') {
@@ -34,6 +34,16 @@ function no_skin_error($passed, $product_id, $qty) {
         $passed = false;
     }
     return $passed;
+}
+
+add_filter( 'woocommerce_add_cart_item_data', 'add_skin_to_cart_data', 10, 2 );
+// Add skins to cart
+function add_skin_to_cart_data($cart_item, $product_id) {
+    if(isset($_POST['back-skin-material']) && isset($_POST['cam-skin-material'])){
+        $cart_item['back_skin'] = sanitize_text_field($_POST['back-skin-material']);
+        $cart_item['cam_skin'] = sanitize_text_field($_POST['cam-skin-material']);
+    }
+    return $cart_item;
 }
 
 ?>
