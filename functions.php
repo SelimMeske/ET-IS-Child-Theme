@@ -1,6 +1,6 @@
 <?php
 
-require_once('et-field.php');
+require_once(get_stylesheet_directory_uri() . '/et-field.php');
 
 function my_custom_scripts() {
     wp_enqueue_script( 'local-storage-handler', get_stylesheet_directory_uri() . '/js/localStorageHandler.js', array('jquery'), rand(100, 1000) . '.' . rand(0, 1000),true );
