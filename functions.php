@@ -57,4 +57,13 @@ function save_skin_data($item_id, $values) {
     }
 }
 
+add_filter( 'woocommerce_order_item_product', 'show_in_table', 10, 2);
+
+function show_in_table($cart_item, $order_item){
+    if(isset($order_item['back_skin'])){
+        $cart_item['back_skin'] = $order_item['back_skin'];
+    }
+    return $cart_item;
+}
+
 ?>
