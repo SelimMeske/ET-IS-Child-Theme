@@ -28,7 +28,7 @@ function hidden_input_field() { ?>
 // Add error handler
 add_filter('woocommerce_add_to_cart_validation', 'no_skin_error', 10, 3);
 function no_skin_error($passed, $product_id, $qty) {
-    if(isset($_POST['back-skin-material']) && isset($_POST['cam-skin-material']) && sanitize_text_field($_POST['back-skin-material']) && sanitize_text_field($_POST['cam-skin-material'])  == '') {
+    if(isset($_POST['back-skin-material']) == '' && isset($_POST['cam-skin-material']) == '' && sanitize_text_field($_POST['back-skin-material']) == '' && sanitize_text_field($_POST['cam-skin-material'])  == '') {
         wc_add_notice( 'Molim vas odaberite skin.', 'error' );
         
         $passed = false;
