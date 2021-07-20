@@ -94,9 +94,15 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 						</td>
 
-						<td class="product-price" data-title="<?php esc_attr_e( 'Material pozadine', 'woocommerce' ); ?>">
+						<td  data-title="<?php esc_attr_e( 'Material pozadine', 'woocommerce' ); ?>">
 							<?php
 								echo $cart_item['back_skin'];
+							?>
+						</td>
+
+						<td data-title="<?php esc_attr_e( 'Material kamere', 'woocommerce' ); ?>">
+							<?php
+								echo $cart_item['cam_skin'];
 							?>
 						</td>
 
