@@ -55,15 +55,15 @@ function add_skin_to_cart_data($cart_item, $product_id) {
 add_action('woocommerce_add_order_item_meta', 'save_skin_data', 10, 2);
 function save_skin_data($item_id, $values) {
     if(!empty($values['back_skin'])) {
-        wc_add_order_item_meta( $item_id, 'Back Skin Material', $values['back_skin'], true );
+        wc_add_order_item_meta( $item_id, 'Materijal Pozadine', $values['back_skin'], true );
     }
     
     if(!empty($values['cam_skin'])) {
-        wc_add_order_item_meta( $item_id, 'Cam Skin Material', $values['cam_skin'], true );
+        wc_add_order_item_meta( $item_id, 'Materijal Kamere', $values['cam_skin'], true );
     }
 
     if(!empty($values['phone_model'])) {
-        wc_add_order_item_meta( $item_id, 'Cam Skin Material', $values['phone_model'], true );
+        wc_add_order_item_meta( $item_id, 'Model telefona', $values['phone_model'], true );
     }
 }
 
