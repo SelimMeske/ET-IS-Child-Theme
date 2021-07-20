@@ -108,7 +108,11 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						<td data-title="<?php esc_attr_e( 'Material kamere', 'woocommerce' ); ?>">
 							<?php
-								echo $cart_item['cam_skin'];
+								if (!$cart_item['cam_skin']){
+									echo "Nema meeee, nema me...";
+								}else{
+									echo $cart_item['cam_skin'];
+								}
 							?>
 						</td>
 
