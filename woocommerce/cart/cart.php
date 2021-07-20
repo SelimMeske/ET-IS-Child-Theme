@@ -28,6 +28,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<th class="product-remove">&nbsp;</th>
 				<th class="product-thumbnail">&nbsp;</th>
 				<th class="product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
+				<th><?php esc_html_e( 'Model Telefona', 'woocommerce' ); ?></th>
+				<th><?php esc_html_e( 'Pozadinski Skin', 'woocommerce' ); ?></th>
+				<th><?php esc_html_e( 'Skin Kamere', 'woocommerce' ); ?></th>
 				<th class="product-price"><?php esc_html_e( 'Price', 'woocommerce' ); ?></th>
 				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></th>
 				<th class="product-subtotal"><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></th>
