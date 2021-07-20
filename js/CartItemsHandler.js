@@ -1,8 +1,3 @@
-let currentCartItems = [];
-let backMainText = 'Pozadniski skin';
-let camMainText = 'Skin kamere';
-let bcMainText = 'Pozadniski + kamera skin';
-
 jQuery.ajax({
   url: "https://infinityskins.ba/wp-json/cocart/v2/cart/items",
   method: "GET",
