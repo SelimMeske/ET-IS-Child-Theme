@@ -93,6 +93,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 						}
 						?>
 						</td>
+						
+						<td  data-title="<?php esc_attr_e( 'Model telefona', 'woocommerce' ); ?>">
+							<?php
+								echo $cart_item['phone_model'];
+							?>
+						</td>
 
 						<td  data-title="<?php esc_attr_e( 'Material pozadine', 'woocommerce' ); ?>">
 							<?php

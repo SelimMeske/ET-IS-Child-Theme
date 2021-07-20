@@ -23,6 +23,7 @@ add_action('woocommerce_before_add_to_cart_button', 'hidden_input_field');
 function hidden_input_field() { ?>
     <input type="text" id="back-skin-material" name="back-skin-material" value=''>
     <input type="text" id="cam-skin-material" name="cam-skin-material" value=''>
+    <input type="text" id="phone-model" name="phone-model" value=''>
 <?php }
 
 // Add error handler
@@ -32,6 +33,10 @@ function no_skin_error($passed, $product_id, $qty) {
         wc_add_notice( 'Molim vas odaberite skin.', 'error' );
         
         $passed = false;
+    }elseif(isset($_POST['phone-model']) == '' && sanitize_text_field($_POST['phone-model']) == ''){
+        wc_add_notice( 'Molim vas odaberite model vašeg mobilnog uređaja.', 'error' );
+        
+        $passed = false;
     }
     return $passed;
 }
@@ -39,9 +44,10 @@ function no_skin_error($passed, $product_id, $qty) {
 add_filter( 'woocommerce_add_cart_item_data', 'add_skin_to_cart_data', 10, 2 );
 // Add skins to cart
 function add_skin_to_cart_data($cart_item, $product_id) {
-    if(isset($_POST['back-skin-material']) && isset($_POST['cam-skin-material'])){
+    if(isset($_POST['back-skin-material']) && isset($_POST['cam-skin-material']) && isset($_POST['phone-model'])){
         $cart_item['back_skin'] = sanitize_text_field($_POST['back-skin-material']);
         $cart_item['cam_skin'] = sanitize_text_field($_POST['cam-skin-material']);
+        $cart_item['phone_model'] = sanitize_text_field($_POST['phone-model']);
     }
     return $cart_item;
 }
@@ -55,13 +61,19 @@ function save_skin_data($item_id, $values) {
     if(!empty($values['cam_skin'])) {
         wc_add_order_item_meta( $item_id, 'Cam Skin Material', $values['cam_skin'], true );
     }
+
+    if(!empty($values['phone_model'])) {
+        wc_add_order_item_meta( $item_id, 'Cam Skin Material', $values['phone_model'], true );
+    }
 }
 
 add_filter( 'woocommerce_order_item_product', 'show_in_table', 10, 2);
 
 function show_in_table($cart_item, $order_item){
-    if(isset($order_item['back_skin'])){
+    if(isset($order_item['back_skin']) && isset($order_item['cam_skin']) && isset($order_item['phone_model'])){
         $cart_item['back_skin'] = $order_item['back_skin'];
+        $cart_item['cam_skin'] = $order_item['cam_skin'];
+        $cart_item['phone_model'] = $order_item['phone_model'];
     }
     return $cart_item;
 }
