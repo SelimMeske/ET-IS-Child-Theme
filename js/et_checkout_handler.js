@@ -39,6 +39,7 @@ jQuery(document).ready(function() {
           
           document.querySelector('#back-skin-material').value = color_variations_mapper[back_skin_from_local];
           document.querySelector('#cam-skin-material').value = color_variations_mapper[cam_skin_from_local];
+          document.querySelector('#phone-model-hidden').value = document.querySelector('#phone-model').value;
 
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
@@ -50,6 +51,7 @@ jQuery(document).ready(function() {
           let meta_obj_id = document.querySelector('.variation_id').value = varPick;
 
           document.querySelector('#cam-skin-material').value = color_variations_mapper[cam_skin_from_local];
+          document.querySelector('#phone-model-hidden').value = document.querySelector('#phone-model').value;
 
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
@@ -61,6 +63,7 @@ jQuery(document).ready(function() {
           let meta_obj_id = document.querySelector('.variation_id').value = varPick;
 
           document.querySelector('#back-skin-material').value = color_variations_mapper[back_skin_from_local];
+          document.querySelector('#phone-model-hidden').value = document.querySelector('#phone-model').value;
 
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
           document.querySelector('.single_add_to_cart_button').click();

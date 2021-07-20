@@ -23,7 +23,7 @@ add_action('woocommerce_before_add_to_cart_button', 'hidden_input_field');
 function hidden_input_field() { ?>
     <input type="text" id="back-skin-material" name="back-skin-material" value=''>
     <input type="text" id="cam-skin-material" name="cam-skin-material" value=''>
-    <input type="text" id="phone-model" name="phone-model" value=''>
+    <input type="text" id="phone-model-hidden" name="phone-model" value=''>
 <?php }
 
 // Add error handler
