@@ -1,7 +1,3 @@
-.col-2 {
-  display: none !important;
-}
-
-.variation {
+.woocommerce-cart-form .variation {
   display: none !important;
 }
