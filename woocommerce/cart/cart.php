@@ -102,7 +102,11 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						<td  data-title="<?php esc_attr_e( 'Material pozadine', 'woocommerce' ); ?>">
 							<?php
-								echo $cart_item['back_skin'];
+								if (!$cart_item['back_skin']){
+									echo "&#10060;";
+								}else{
+									echo $cart_item['back_skin'];
+								}
 							?>
 						</td>
 
