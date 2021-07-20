@@ -3,9 +3,6 @@ let backMainText = 'Pozadniski skin';
 let camMainText = 'Skin kamere';
 let bcMainText = 'Pozadniski + kamera skin';
 
-if(window.location.pathname == '/cart/'){
-  document.querySelector('#post-87').style.display = 'none';
-}
 
 jQuery.ajax({
   url: "https://infinityskins.ba/wp-json/cocart/v2/cart/items",
