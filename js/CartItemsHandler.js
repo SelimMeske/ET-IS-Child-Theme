@@ -14,8 +14,6 @@ jQuery.ajax({
   contentType: "application/json; charset=utf-8",
   complete: function (response) {
     let odgovor = response.responseJSON;
-
-    cleanMetaDataInLocal(odgovor);
     
     for (let i = 0; i < Object.keys(odgovor).length; i++) {
       let currentResponseId = Object.values(odgovor)[i].id;
