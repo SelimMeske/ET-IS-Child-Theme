@@ -10,8 +10,6 @@ jQuery.ajax({
   contentType: "application/json; charset=utf-8",
   complete: function (response) {
     let odgovor = response.responseJSON;
-
     console.log(odgovor);
-    cleanMetaDataInLocal(odgovor);
   }
 });
