@@ -37,8 +37,8 @@ jQuery(document).ready(function() {
           let varPick = variation_determination(camback_variations, currentCartItems);
           let meta_obj_id = document.querySelector('.variation_id').value = varPick;
           
-          document.querySelector('#back-skin-material').value = back_skin_from_local;
-          document.querySelector('#cam-skin-material').value = cam_skin_from_local;
+          document.querySelector('#back-skin-material').value = color_variations_mapper[back_skin_from_local];
+          document.querySelector('#cam-skin-material').value = color_variations_mapper[cam_skin_from_local];
 
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
@@ -49,7 +49,7 @@ jQuery(document).ready(function() {
           let varPick = variation_determination(cam_variations, currentCartItems);
           let meta_obj_id = document.querySelector('.variation_id').value = varPick;
 
-          document.querySelector('#cam-skin-material').value = cam_skin_from_local;
+          document.querySelector('#cam-skin-material').value = color_variations_mapper[cam_skin_from_local];
 
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
@@ -60,7 +60,7 @@ jQuery(document).ready(function() {
           let varPick = variation_determination(back_variations, currentCartItems);
           let meta_obj_id = document.querySelector('.variation_id').value = varPick;
 
-          document.querySelector('#back-skin-material').value = back_skin_from_local;
+          document.querySelector('#back-skin-material').value = color_variations_mapper[back_skin_from_local];
 
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
           document.querySelector('.single_add_to_cart_button').click();

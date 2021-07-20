@@ -94,6 +94,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 						</td>
 
+						<td class="product-price" data-title="<?php esc_attr_e( 'Material pozadine', 'woocommerce' ); ?>">
+							<?php
+								echo $cart_item['back_skin'];
+							?>
+						</td>
+
 						<td class="product-price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
 							<?php
 								echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
