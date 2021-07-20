@@ -1,4 +1,4 @@
-setTimeout(function() {
+jQuery(document).ready(function() {
 
     init_local_storage();
 
@@ -24,6 +24,10 @@ setTimeout(function() {
     function init_local_storage(){
       window.localStorage.removeItem('back_skin');
       window.localStorage.removeItem('cam_skin');
+
+      if(!window.localStorage.getItem('cart_meta')){
+        window.localStorage.setItem("cart_meta", JSON.stringify([]));
+      }
     }
 
     function update_local_storage(backskin, camskin){
@@ -189,4 +193,4 @@ setTimeout(function() {
         }
     }
 
-}, 2000);
+});

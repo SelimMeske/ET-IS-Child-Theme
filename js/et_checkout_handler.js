@@ -1,21 +1,30 @@
 if(window.location.pathname == '/checkout/') {
   let pozadinskiSkin = window.localStorage.getItem('back_skin');
   let kameraSkin =  window.localStorage.getItem('cam_skin');
-
-  let adminMessage = 'Korisnik je narucio pozadniski skin: ' + pozadinskiSkin.replace('_', ' ') + ', a skin kamere je: ' + kameraSkin.replace('_', ' ');
-
+  let adminMessage = JSON.stringify(window.localStorage.getItem('cart_meta'));
   document.querySelector('#order_comments').value = adminMessage;
 }
 
 let cam_skin_from_local = window.localStorage.getItem("cam_skin");
 let back_skin_from_local = window.localStorage.getItem("back_skin");
+let cart_meta = [];
 
-setTimeout(function(){
+jQuery(document).ready(function() {
 	if(window.location.pathname == '/product/mobilni-skin-konfigurator/') {
 		document.querySelector('.et-buy-button').addEventListener('click', function() {
 
         let cam_skin_from_local = window.localStorage.getItem("cam_skin");
         let back_skin_from_local = window.localStorage.getItem("back_skin");
+        let current_model = document.querySelector("#phone-model").value;
+        let phone_model = document.querySelector("#phone-model");
+
+        if(!current_model) {
+          phone_model.classList.add('model-error-input');
+          setTimeout(function(){
+            phone_model.classList.remove('model-error-input');
+          }, 1100);
+          return;
+        }
 
 				if(cam_skin_from_local == "null" && back_skin_from_local == "null"
         || cam_skin_from_local == null && back_skin_from_local == null
@@ -26,32 +35,46 @@ setTimeout(function(){
           return;
         }else if(cam_skin_from_local !== 'null' && back_skin_from_local !== 'null') {
           let varPick = variation_determination(camback_variations, currentCartItems);
-          console.log(varPick);
-          document.querySelector('.variation_id').value = varPick;
+          let meta_obj_id = document.querySelector('.variation_id').value = varPick;
+          
+          document.querySelector('#back-skin-material').value = color_variations_mapper[back_skin_from_local];
+          document.querySelector('#cam-skin-material').value = color_variations_mapper[cam_skin_from_local];
+          document.querySelector('#phone-model-hidden').value = document.querySelector('#phone-model').value;
+
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
+          let meta_obj = new CartMetaObject(meta_obj_id, back_skin_from_local, cam_skin_from_local, current_model);
+          addMetaToLocal(meta_obj.get_object());
           return;
         }else if(cam_skin_from_local !== 'null'){
           let varPick = variation_determination(cam_variations, currentCartItems);
-          console.log(varPick);
-          document.querySelector('.variation_id').value = varPick;
+          let meta_obj_id = document.querySelector('.variation_id').value = varPick;
+
+          document.querySelector('#cam-skin-material').value = color_variations_mapper[cam_skin_from_local];
+          document.querySelector('#phone-model-hidden').value = document.querySelector('#phone-model').value;
+
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
   				document.querySelector('.single_add_to_cart_button').click();
-          console.log('VARIJACIJA CAM ')
+          let meta_obj = new CartMetaObject(meta_obj_id, back_skin_from_local, cam_skin_from_local, current_model);
+          addMetaToLocal(meta_obj.get_object());
           return;
         }else if(back_skin_from_local !== 'null'){
           let varPick = variation_determination(back_variations, currentCartItems);
-          console.log(varPick);
-          document.querySelector('.variation_id').value = varPick;
+          let meta_obj_id = document.querySelector('.variation_id').value = varPick;
+
+          document.querySelector('#back-skin-material').value = color_variations_mapper[back_skin_from_local];
+          document.querySelector('#phone-model-hidden').value = document.querySelector('#phone-model').value;
+
   				document.querySelector('.single_add_to_cart_button').classList.remove('disabled');
           document.querySelector('.single_add_to_cart_button').click();
-          console.log('VARIJACIJA BACK ')
+          let meta_obj = new CartMetaObject(meta_obj_id, back_skin_from_local, cam_skin_from_local, current_model);
+          addMetaToLocal(meta_obj.get_object());
           return;
         }
 
 		});
 	}
-}, 2100);
+});
 
 
 function variation_determination(var_list, restricted_vars){
