@@ -1,4 +1,4 @@
-<div class="app et-d-flex">
+<?php echo '<div class="app et-d-flex">
     <div class="et-container et-d-flex mobile-only-flex">
         <div class="et-mobile-container">
             <figure id="et-figure" class="et-d-flex">
@@ -109,4 +109,4 @@
         </div>
         </p>
     </div>
-</div>
+</div>'
