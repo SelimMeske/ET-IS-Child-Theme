@@ -76,4 +76,14 @@ function show_in_table($cart_item, $order_item){
     return $cart_item;
 }
 
+function main_template_shortcode() {
+    ob_start();
+    include(get_stylesheet_directory_uri() . '/main_template.php');
+    $content = ob_get_contents();
+
+    return $content;
+}
+
+add_shortcode('evertech', 'main_template_shortcode');
+
 ?>
