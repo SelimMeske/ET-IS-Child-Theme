@@ -19,19 +19,15 @@ add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
 // Add input fields
 add_action('woocommerce_before_add_to_cart_button', 'hidden_input_field');
 function hidden_input_field() { ?>
-    <input type="text" id="back-skin-material" name="back-skin-material" value=''>
-    <input type="text" id="cam-skin-material" name="cam-skin-material" value=''>
-    <input type="text" id="phone-model-hidden" name="phone-model" value=''>
+    <input style="display: none;" type="text" id="back-skin-material" name="back-skin-material" value=''>
+    <input style="display: none;" type="text" id="cam-skin-material" name="cam-skin-material" value=''>
+    <input style="display: none;" type="text" id="phone-model-hidden" name="phone-model" value=''>
 <?php }
 
 // Add error handler
 add_filter('woocommerce_add_to_cart_validation', 'no_skin_error', 10, 3);
 function no_skin_error($passed, $product_id, $qty) {
-    if(isset($_POST['back-skin-material']) == '' && isset($_POST['cam-skin-material']) == '' && sanitize_text_field($_POST['back-skin-material']) == '' && sanitize_text_field($_POST['cam-skin-material'])  == '') {
-        wc_add_notice( 'Molim vas odaberite skin.', 'error' );
-        
-        $passed = false;
-    }elseif(isset($_POST['phone-model']) == '' && sanitize_text_field($_POST['phone-model']) == ''){
+    if(isset($_POST['phone-model']) == '' && sanitize_text_field($_POST['phone-model']) == ''){
         wc_add_notice( 'Molim vas odaberite model vašeg mobilnog uređaja.', 'error' );
         
         $passed = false;
