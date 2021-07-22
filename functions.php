@@ -21,7 +21,8 @@ add_action('woocommerce_before_add_to_cart_button', 'hidden_input_field');
 function hidden_input_field() { ?>
     <input style="display: none;" type="text" id="back-skin-material" name="back-skin-material" value=''>
     <input style="display: none;" type="text" id="cam-skin-material" name="cam-skin-material" value=''>
-    <input style="display: none;" type="text" id="phone-model-hidden" name="phone-model" value=''>
+    
+    <?php if is_single(517) ? echo '<input type="text" id="phone-model-hidden" name="phone-model" value=''>'; : echo '<input style="display: none;" type="text" id="phone-model-hidden" name="phone-model" value=''>'; endif;
 <?php }
 
 // Add error handler
