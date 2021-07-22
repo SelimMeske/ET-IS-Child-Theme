@@ -172,6 +172,9 @@ function main_template_shortcode() {
                             <div id="carbon-yellow" class="material-card"><img
                                     src="https://infinityskins.ba/wp-content/uploads/2021/06/yellowCarbon-Sample.jpg"
                                     alt="" /></div>
+                            <div id="leopard" class="material-card"><img
+                                    src="http://infinityskins.ba/wp-content/uploads/2021/07/tiger-skin-sample.png"
+                                    alt="" /></div>
                         </li>
                         <li class="material-category"></li>
                         <li class="material-category"></li>

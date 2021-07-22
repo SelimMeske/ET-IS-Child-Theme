@@ -1,8 +1,8 @@
 class Mobile extends BackSkins{
-    constructor(name, carbonRedBack, carbonBlackBack, carbonYellowBack, carbonWhiteBack, carbonGrayBack,
-        carbonRedCam, carbonBlackCam, leatherBlackCam, whiteCarbonCam, carbonGrayCam){
-        super(carbonRedBack, carbonBlackBack, carbonYellowBack, carbonWhiteBack, carbonGrayBack, 
-              carbonRedCam, carbonBlackCam, leatherBlackCam, whiteCarbonCam, carbonGrayCam);
+    constructor(name, carbonRedBack, carbonBlackBack, carbonYellowBack, carbonWhiteBack, carbonGrayBack, leopardBack,
+        carbonRedCam, carbonBlackCam, leatherBlackCam, whiteCarbonCam, carbonGrayCam, leopardCam){
+        super(carbonRedBack, carbonBlackBack, carbonYellowBack, carbonWhiteBack, carbonGrayBack, leopardBack,
+              carbonRedCam, carbonBlackCam, leatherBlackCam, whiteCarbonCam, carbonGrayCam, leopardCam);
         this.name = name;
     }
 }
