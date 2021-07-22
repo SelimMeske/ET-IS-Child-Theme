@@ -22,8 +22,15 @@ function hidden_input_field() { ?>
     <input style="display: none;" type="text" id="back-skin-material" name="back-skin-material" value=''>
     <input style="display: none;" type="text" id="cam-skin-material" name="cam-skin-material" value=''>
     
-    <?php if is_single(517) ? echo '<input type="text" id="phone-model-hidden" name="phone-model" value=''>'; : echo '<input style="display: none;" type="text" id="phone-model-hidden" name="phone-model" value=''>'; endif;
-<?php }
+    <?php if(is_single(517)){?>
+        <div class="et-d-flex" style="padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid #bbb; flex-direction: column;">
+            <h3 style="padding: 0; font-style: bold;">Unesite model vašeg telefona</h3>
+            <input type="text" placeholder="Npr. Samsung A10" id="phone-model-hidden" name="phone-model" value=''>
+        </div>
+    <?php }else { ?>
+        <input style="display: none;" type="text" id="phone-model-hidden" name="phone-model" value=''>
+    <?php }
+}
 
 // Add error handler
 add_filter('woocommerce_add_to_cart_validation', 'no_skin_error', 10, 3);
