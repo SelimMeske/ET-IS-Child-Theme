@@ -188,9 +188,9 @@ function main_template_shortcode() {
         </div>
         </p>
     </div>
-</div>'
+</div>';
 
-    return $content;
+    echo $content;
 }
 
 add_shortcode('evertech', 'main_template_shortcode');
