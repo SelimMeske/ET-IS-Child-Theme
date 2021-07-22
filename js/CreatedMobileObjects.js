@@ -11,5 +11,5 @@ let galaxyS21 = new Mobile("Galaxy S21",
                             "http://infinityskins.ba/wp-content/uploads/2021/06/infinity-logo.png",
                             "http://infinityskins.ba/wp-content/uploads/2021/06/carbon-white-cam-new.png",
                             "http://infinityskins.ba/wp-content/uploads/2021/06/carbon-gray-camera-new.png",
-                            "http://infinityskins.ba/wp-content/uploads/2021/07/leopard-cam-new.png"
+                            "http://infinityskins.ba/wp-content/uploads/2021/07/new-cam-leo.png"
                             );
