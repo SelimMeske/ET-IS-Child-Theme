@@ -57,7 +57,8 @@ let color_variations_mapper = {
   "snake_back": "Zmija",
   "nike_back": "Nike",
   "louis_vuitton_back": "Luis Vuitton",
-  "lighpink_v2_back": "Light Pink",
+  "lighpink_back": "Light Pink"
+  "lighpink_v2_back": "Light Pink v2",
   "honeycomb_back": "Honey Comb",
   "honey_comb_v2": "Honey Comb v2",
   "hexagon_back": "Hexagon",

@@ -180,13 +180,13 @@ function main_template_shortcode() {
                                     alt="" /></div>
 
               							<div id="threedcube-back" class="material-card"><img
-                                                  src="http://infinityskins.ba/wp-content/uploads/2021/10/blue_camo_sample.jpg"
+                                                  src="http://infinityskins.ba/wp-content/uploads/2021/10/kocka.jpg"
                                                   alt="" /></div>
               							<div id="wood-back" class="material-card"><img
-                                                  src="https://infinityskins.ba/wp-content/uploads/2021/06/carbon-gray-sample.jpg"
+                                                  src="http://infinityskins.ba/wp-content/uploads/2021/10/drvo.jpg"
                                                   alt="" /></div>
                             <div id="supreme-back" class="material-card"><img
-                                    src="https://infinityskins.ba/wp-content/uploads/2021/05/Screenshot_2.png" alt="" />
+                                    src="http://infinityskins.ba/wp-content/uploads/2021/10/lv-supreme.jpg" alt="" />
                             </div>
                             <div id="summer-back" class="material-card"><img
                                     src="http://infinityskins.ba/wp-content/uploads/2021/10/summerBack.jpg" alt="" />

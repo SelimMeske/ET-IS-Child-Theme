@@ -204,19 +204,19 @@ jQuery(document).ready(function() {
                                       choosedCamSkin = 'leopard';
                                    }
                                   break;
-          					case "ligh_pink_back":
+          					case "lighpink_back":
                                    if (mode == 'back_skin') {
                                       backSkinImage.href.baseVal = galaxyS21.lighPinkBack;
-                                      choosedBackSkin = 'ligh_pink_back';
+                                      choosedBackSkin = 'lighpink_back';
                                    } else if (mode == 'cam_skin') {
                                       camSkinImage.href.baseVal = galaxyS21.leopardCam;
                                       choosedCamSkin = 'leopard';
                                    }
                                   break;
-          					case "ligh_pink_v2_back":
+          					case "lighpink_v2_back":
                                    if (mode == 'back_skin') {
                                       backSkinImage.href.baseVal = galaxyS21.lighPinkV2Back;
-                                      choosedBackSkin = 'ligh_pink_v2_back';
+                                      choosedBackSkin = 'lighpink_v2_back';
                                    } else if (mode == 'cam_skin') {
                                       camSkinImage.href.baseVal = galaxyS21.leopardCam;
                                       choosedCamSkin = 'leopard';
