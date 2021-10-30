@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function () {
 
     init_local_storage();
 
@@ -21,18 +21,18 @@ jQuery(document).ready(function() {
     let camSkinCard = document.querySelector("#et-cam-skin");
 
 
-    function init_local_storage(){
-      window.localStorage.removeItem('back_skin');
-      window.localStorage.removeItem('cam_skin');
+    function init_local_storage() {
+        window.localStorage.removeItem('back_skin');
+        window.localStorage.removeItem('cam_skin');
 
-      if(!window.localStorage.getItem('cart_meta')){
-        window.localStorage.setItem("cart_meta", JSON.stringify([]));
-      }
+        if (!window.localStorage.getItem('cart_meta')) {
+            window.localStorage.setItem("cart_meta", JSON.stringify([]));
+        }
     }
 
-    function update_local_storage(backskin, camskin){
-      window.localStorage.setItem('back_skin', backskin);
-      window.localStorage.setItem('cam_skin', camskin);
+    function update_local_storage(backskin, camskin) {
+        window.localStorage.setItem('back_skin', backskin);
+        window.localStorage.setItem('cam_skin', camskin);
     }
 
     //Add mode depending on what did the user choose, back or cam skin.
@@ -137,136 +137,136 @@ jQuery(document).ready(function() {
                             backSkinImage.href.baseVal = galaxyS21.blueCamoBack;
                             choosedBackSkin = 'blue_camo';
                         } else if (mode == 'cam_skin') {
-                            camSkinImage.href.baseVal = galaxyS21.leopardCam;
-                            choosedCamSkin = 'leopard';
+                            camSkinImage.href.baseVal = galaxyS21.blueCamoCam;
+                            choosedCamSkin = 'blue_camo';
                         }
-                       break;
+                        break;
                     case "threedcube_back":
                         if (mode == 'back_skin') {
                             backSkinImage.href.baseVal = galaxyS21.threedcubeBack;
                             choosedBackSkin = 'threedcube_back';
                         } else if (mode == 'cam_skin') {
-                            camSkinImage.href.baseVal = galaxyS21.leopardCam;
-                            choosedCamSkin = 'leopard';
+                            camSkinImage.href.baseVal = galaxyS21.threedcubeCam;
+                            choosedCamSkin = 'threedcube_back';
                         }
-                      break;
+                        break;
                     case "wood_back":
                         if (mode == 'back_skin') {
                             backSkinImage.href.baseVal = galaxyS21.woodBack;
                             choosedBackSkin = 'wood_back';
-                         } else if (mode == 'cam_skin') {
-                            camSkinImage.href.baseVal = galaxyS21.leopardCam;
-                            choosedCamSkin = 'leopard';
+                        } else if (mode == 'cam_skin') {
+                            camSkinImage.href.baseVal = galaxyS21.woodCam;
+                            choosedCamSkin = 'wood_back';
                         }
                         break;
                     case "supreme_back":
                         if (mode == 'back_skin') {
                             backSkinImage.href.baseVal = galaxyS21.supremeBack;
                             choosedBackSkin = 'supreme_back';
-                          } else if (mode == 'cam_skin') {
-                            camSkinImage.href.baseVal = galaxyS21.leopardCam;
-                            choosedCamSkin = 'leopard';
-                          }
+                        } else if (mode == 'cam_skin') {
+                            camSkinImage.href.baseVal = galaxyS21.supremeCam;
+                            choosedCamSkin = 'supreme_back';
+                        }
                         break;
                     case "summer_back":
-                         if (mode == 'back_skin') {
+                        if (mode == 'back_skin') {
                             backSkinImage.href.baseVal = galaxyS21.summerBack;
                             choosedBackSkin = 'summer_back';
-                         } else if (mode == 'cam_skin') {
-                            camSkinImage.href.baseVal = galaxyS21.leopardCam;
-                            choosedCamSkin = 'leopard';
-                         }
+                        } else if (mode == 'cam_skin') {
+                            camSkinImage.href.baseVal = galaxyS21.summerCam;
+                            choosedCamSkin = 'summer_back';
+                        }
                         break;
-          					case "snake_back":
-                          if (mode == 'back_skin') {
-                              backSkinImage.href.baseVal = galaxyS21.snakeBack;
-                              choosedBackSkin = 'snake_back';
-                          } else if (mode == 'cam_skin') {
-                              camSkinImage.href.baseVal = galaxyS21.leopardCam;
-                              choosedCamSkin = 'leopard';
-                          }
+                    case "snake_back":
+                        if (mode == 'back_skin') {
+                            backSkinImage.href.baseVal = galaxyS21.snakeBack;
+                            choosedBackSkin = 'snake_back';
+                        } else if (mode == 'cam_skin') {
+                            camSkinImage.href.baseVal = galaxyS21.snakeCam;
+                            choosedCamSkin = 'snake_back';
+                        }
                         break;
-          					case "nike_back":
-                                  if (mode == 'back_skin') {
-                                      backSkinImage.href.baseVal = galaxyS21.nikeBack;
-                                      choosedBackSkin = 'nike_back';
-                                    } else if (mode == 'cam_skin') {
-                                      camSkinImage.href.baseVal = galaxyS21.leopardCam;
-                                      choosedCamSkin = 'leopard';
-                                    }
-                                  break;
+                    case "nike_back":
+                        if (mode == 'back_skin') {
+                            backSkinImage.href.baseVal = galaxyS21.nikeBack;
+                            choosedBackSkin = 'nike_back';
+                        } else if (mode == 'cam_skin') {
+                            camSkinImage.href.baseVal = galaxyS21.nikeCam;
+                            choosedCamSkin = 'nike_back';
+                        }
+                        break;
                     case "louis_vuitton_back":
-                                  if (mode == 'back_skin') {
-                                      backSkinImage.href.baseVal = galaxyS21.louisVuittonBack;
-                                      choosedBackSkin = 'louis_vuitton_back';
-                                   } else if (mode == 'cam_skin') {
-                                      camSkinImage.href.baseVal = galaxyS21.leopardCam;
-                                      choosedCamSkin = 'leopard';
-                                   }
-                                  break;
-          					case "lighpink_back":
-                                   if (mode == 'back_skin') {
-                                      backSkinImage.href.baseVal = galaxyS21.lighPinkBack;
-                                      choosedBackSkin = 'lighpink_back';
-                                   } else if (mode == 'cam_skin') {
-                                      camSkinImage.href.baseVal = galaxyS21.leopardCam;
-                                      choosedCamSkin = 'leopard';
-                                   }
-                                  break;
-          					case "lighpink_v2_back":
-                                   if (mode == 'back_skin') {
-                                      backSkinImage.href.baseVal = galaxyS21.lighPinkV2Back;
-                                      choosedBackSkin = 'lighpink_v2_back';
-                                   } else if (mode == 'cam_skin') {
-                                      camSkinImage.href.baseVal = galaxyS21.leopardCam;
-                                      choosedCamSkin = 'leopard';
-                                   }
-                                  break;
-          					case "honeycomb_back":
-                                  if (mode == 'back_skin') {
-                                      backSkinImage.href.baseVal = galaxyS21.honeycombBack;
-                                      choosedBackSkin = 'honeycomb_back';
-                                    } else if (mode == 'cam_skin') {
-                                      camSkinImage.href.baseVal = galaxyS21.leopardCam;
-                                      choosedCamSkin = 'leopard';
-                                    }
-                                  break;
-                              case "honey_comb_v2":
-                                   if (mode == 'back_skin') {
-                                      backSkinImage.href.baseVal = galaxyS21.honeyCombv2;
-                                      choosedBackSkin = 'honey_comb_v2';
-                                   } else if (mode == 'cam_skin') {
-                                      camSkinImage.href.baseVal = galaxyS21.leopardCam;
-                                      choosedCamSkin = 'leopard';
-                                   }
-                                  break;
-          					case "hexagon_back":
-                                   if (mode == 'back_skin') {
-                                      backSkinImage.href.baseVal = galaxyS21.hexagonBack;
-                                      choosedBackSkin = 'hexagon_back';
-                                   } else if (mode == 'cam_skin') {
-                                      camSkinImage.href.baseVal = galaxyS21.leopardCam;
-                                      choosedCamSkin = 'leopard';
-                                   }
-                                  break;
-          					case "blue_marbel_back":
-                                  if (mode == 'back_skin') {
-                                      backSkinImage.href.baseVal = galaxyS21.blueMarbelBack;
-                                      choosedBackSkin = 'blue_marbel_back';
-                                    } else if (mode == 'cam_skin') {
-                                      camSkinImage.href.baseVal = galaxyS21.leopardCam;
-                                      choosedCamSkin = 'leopard';
-                                    }
-                                  break;
-          					case "art_back":
-                                   if (mode == 'back_skin') {
-                                      backSkinImage.href.baseVal = galaxyS21.artBack;
-                                      choosedBackSkin = 'art_back';
-                                   } else if (mode == 'cam_skin') {
-                                      camSkinImage.href.baseVal = galaxyS21.leopardCam;
-                                      choosedCamSkin = 'leopard';
-                                   }
-                                  break;
+                        if (mode == 'back_skin') {
+                            backSkinImage.href.baseVal = galaxyS21.louisVuittonBack;
+                            choosedBackSkin = 'louis_vuitton_back';
+                        } else if (mode == 'cam_skin') {
+                            camSkinImage.href.baseVal = galaxyS21.louisVuittonCam;
+                            choosedCamSkin = 'louis_vuitton_back';
+                        }
+                        break;
+                    case "lighpink_back":
+                        if (mode == 'back_skin') {
+                            backSkinImage.href.baseVal = galaxyS21.lighPinkBack;
+                            choosedBackSkin = 'lighpink_back';
+                        } else if (mode == 'cam_skin') {
+                            camSkinImage.href.baseVal = galaxyS21.lighPinkCam;
+                            choosedCamSkin = 'lighpink_back';
+                        }
+                        break;
+                    case "lighpink_v2_back":
+                        if (mode == 'back_skin') {
+                            backSkinImage.href.baseVal = galaxyS21.lighPinkV2Back;
+                            choosedBackSkin = 'lighpink_v2_back';
+                        } else if (mode == 'cam_skin') {
+                            camSkinImage.href.baseVal = galaxyS21.lighPinkV2Cam;
+                            choosedCamSkin = 'lighpink_v2_back';
+                        }
+                        break;
+                    case "honeycomb_back":
+                        if (mode == 'back_skin') {
+                            backSkinImage.href.baseVal = galaxyS21.honeycombBack;
+                            choosedBackSkin = 'honeycomb_back';
+                        } else if (mode == 'cam_skin') {
+                            camSkinImage.href.baseVal = galaxyS21.honeycombCam;
+                            choosedCamSkin = 'honeycomb_back';
+                        }
+                        break;
+                    case "honey_comb_v2":
+                        if (mode == 'back_skin') {
+                            backSkinImage.href.baseVal = galaxyS21.honeyCombv2;
+                            choosedBackSkin = 'honey_comb_v2';
+                        } else if (mode == 'cam_skin') {
+                            camSkinImage.href.baseVal = galaxyS21.honeyCombv2Cam;
+                            choosedCamSkin = 'honey_comb_v2';
+                        }
+                        break;
+                    case "hexagon_back":
+                        if (mode == 'back_skin') {
+                            backSkinImage.href.baseVal = galaxyS21.hexagonBack;
+                            choosedBackSkin = 'hexagon_back';
+                        } else if (mode == 'cam_skin') {
+                            camSkinImage.href.baseVal = galaxyS21.hexagonCam;
+                            choosedCamSkin = 'hexagon_back';
+                        }
+                        break;
+                    case "blue_marbel_back":
+                        if (mode == 'back_skin') {
+                            backSkinImage.href.baseVal = galaxyS21.blueMarbelBack;
+                            choosedBackSkin = 'blue_marbel_back';
+                        } else if (mode == 'cam_skin') {
+                            camSkinImage.href.baseVal = galaxyS21.blueMarbelCam;
+                            choosedCamSkin = 'blue_marbel_back';
+                        }
+                        break;
+                    case "art_back":
+                        if (mode == 'back_skin') {
+                            backSkinImage.href.baseVal = galaxyS21.artBack;
+                            choosedBackSkin = 'art_back';
+                        } else if (mode == 'cam_skin') {
+                            camSkinImage.href.baseVal = galaxyS21.artCam;
+                            choosedCamSkin = 'art_back';
+                        }
+                        break;
                 }
                 if (mode == 'back_skin') {
                     add_selected_material(allMaterialCards, choosedBackSkin, parent_card);
