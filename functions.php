@@ -179,7 +179,7 @@ function main_template_shortcode() {
                                     src="http://infinityskins.ba/wp-content/uploads/2021/10/blue_camo_sample.jpg"
                                     alt="" /></div>
 
-              							<div id="3d-cube-back" class="material-card"><img
+              							<div id="three-d-cube-back" class="material-card"><img
                                                   src="http://infinityskins.ba/wp-content/uploads/2021/10/blue_camo_sample.jpg"
                                                   alt="" /></div>
               							<div id="wood-back" class="material-card"><img
