@@ -60,6 +60,9 @@ jQuery(document).ready(function() {
             let parent_card = e.target.parentElement;
             let material = parent_card.id.replace('-', '_');
 
+            console.log(material);
+            console.log(parent_card);
+
 
             if (mode == 'back_skin' && material == choosedBackSkin) {
                 remove_all_selected_material_cards(allMaterialCards);

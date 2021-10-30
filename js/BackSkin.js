@@ -23,7 +23,7 @@ class BackSkins extends CamSkins{
         this.honeyCombv2 = honeyCombv2;
         this.hexagonBack = hexagonBack;
         this.blueMarbelBack = blueMarbelBack;
-        this.blueMarbelBack =blueMarbelBack;
+        this.blueMarbelBack = blueMarbelBack;
         this.artBack = artBack;
 
     }
