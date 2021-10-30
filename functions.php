@@ -175,7 +175,7 @@ function main_template_shortcode() {
                             <div id="leopard" class="material-card"><img
                                     src="http://infinityskins.ba/wp-content/uploads/2021/07/tiger-skin-sample.png"
                                     alt="" /></div>
-                            <div id="leopard" class="material-card"><img
+                            <div id="blue_camo" class="material-card"><img
                                     src="http://infinityskins.ba/wp-content/uploads/2021/10/blue_camo_sample.jpg"
                                     alt="" /></div>
                         </li>
