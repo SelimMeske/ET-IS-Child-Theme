@@ -25,6 +25,5 @@ class BackSkins extends CamSkins{
         this.blueMarbelBack = blueMarbelBack;
         this.blueMarbelBack = blueMarbelBack;
         this.artBack = artBack;
-
     }
 }
