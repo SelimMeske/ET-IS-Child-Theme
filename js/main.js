@@ -58,7 +58,8 @@ jQuery(document).ready(function() {
         allMaterials[i].addEventListener('click', e => {
 
             let parent_card = e.target.parentElement;
-            let material = parent_card.id.replace('-', '_');
+            //let material = parent_card.id.replace('-', '_');
+            let material = parent_card.id.replace(/-/g, '_');
 
             console.log(material);
             console.log(parent_card);
