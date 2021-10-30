@@ -21,7 +21,7 @@ add_action('woocommerce_before_add_to_cart_button', 'hidden_input_field');
 function hidden_input_field() { ?>
     <input style="display: none;" type="text" id="back-skin-material" name="back-skin-material" value=''>
     <input style="display: none;" type="text" id="cam-skin-material" name="cam-skin-material" value=''>
-    
+
     <?php if(is_single(517)){?>
         <div class="et-d-flex" style="padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid #bbb; flex-direction: column;">
             <h3 style="padding: 0; font-style: bold;">Unesite model vašeg telefona</h3>
@@ -37,7 +37,7 @@ add_filter('woocommerce_add_to_cart_validation', 'no_skin_error', 10, 3);
 function no_skin_error($passed, $product_id, $qty) {
     if(isset($_POST['phone-model']) == '' && sanitize_text_field($_POST['phone-model']) == ''){
         wc_add_notice( 'Molim vas odaberite model vašeg mobilnog uređaja.', 'error' );
-        
+
         $passed = false;
     }
     return $passed;
@@ -59,7 +59,7 @@ function save_skin_data($item_id, $values) {
     if(!empty($values['back_skin'])) {
         wc_add_order_item_meta( $item_id, 'Materijal Pozadine', $values['back_skin'], true );
     }
-    
+
     if(!empty($values['cam_skin'])) {
         wc_add_order_item_meta( $item_id, 'Materijal Kamere', $values['cam_skin'], true );
     }
@@ -174,6 +174,9 @@ function main_template_shortcode() {
                                     alt="" /></div>
                             <div id="leopard" class="material-card"><img
                                     src="http://infinityskins.ba/wp-content/uploads/2021/07/tiger-skin-sample.png"
+                                    alt="" /></div>
+                            <div id="blue-camo" class="material-card"><img
+                                    src="http://infinityskins.ba/wp-content/uploads/2021/10/blue_camo_sample.jpg"
                                     alt="" /></div>
                         </li>
                         <li class="material-category"></li>

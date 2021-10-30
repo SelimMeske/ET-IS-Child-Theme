@@ -48,5 +48,6 @@ let color_variations_mapper = {
   "carbon_gray": "Sivi karbon",
   "carbon_yellow": "Žuti karbon",
   "carbon_white": "Bijeli karbon",
-  'leopard': 'Leopard'
+  'leopard': 'Leopard',
+  "blue_camo": "Blue Camo"
 }
