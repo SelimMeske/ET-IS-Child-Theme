@@ -8,5 +8,6 @@ class BackSkins extends CamSkins{
         this.carbonWhiteBack = carbonWhiteBack;
         this.carbonGrayBack = carbonGrayBack;
         this.leopardBack = leopardBack;
+        this.blueCamoBack = blueCamoBack;
     }
 }
