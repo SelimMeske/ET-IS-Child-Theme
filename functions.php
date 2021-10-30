@@ -175,8 +175,51 @@ function main_template_shortcode() {
                             <div id="leopard" class="material-card"><img
                                     src="http://infinityskins.ba/wp-content/uploads/2021/07/tiger-skin-sample.png"
                                     alt="" /></div>
-                            <div id="blue_camo" class="material-card"><img
+                            <div id="blue-camo" class="material-card"><img
                                     src="http://infinityskins.ba/wp-content/uploads/2021/10/blue_camo_sample.jpg"
+                                    alt="" /></div>
+
+              							<div id="3d-cube-back" class="material-card"><img
+                                                  src="http://infinityskins.ba/wp-content/uploads/2021/10/blue_camo_sample.jpg"
+                                                  alt="" /></div>
+              							<div id="wood-back" class="material-card"><img
+                                                  src="https://infinityskins.ba/wp-content/uploads/2021/06/carbon-gray-sample.jpg"
+                                                  alt="" /></div>
+                            <div id="supreme-back" class="material-card"><img
+                                    src="https://infinityskins.ba/wp-content/uploads/2021/05/Screenshot_2.png" alt="" />
+                            </div>
+                            <div id="summer-back" class="material-card"><img
+                                    src="http://infinityskins.ba/wp-content/uploads/2021/10/summerBack.jpg" alt="" />
+                            </div>
+                            <div id="snake-back" class="material-card"><img
+                                    src="http://infinityskins.ba/wp-content/uploads/2021/10/snakeBack.jpg"
+                                    alt="" /></div>
+                            <div id="nike-back" class="material-card"><img
+                                    src="http://infinityskins.ba/wp-content/uploads/2021/10/nikeBack.jpg"
+                                    alt="" /></div>
+                            <div id="louis-vuitton-back" class="material-card"><img
+                                    src="http://infinityskins.ba/wp-content/uploads/2021/10/louisVuittonBack.jpg"
+                                    alt="" /></div>
+                            <div id="lighpink-back" class="material-card"><img
+                                    src="http://infinityskins.ba/wp-content/uploads/2021/10/lighPinkBack.jpg"
+                                    alt="" /></div>
+              							<div id="lighpink-v2-back" class="material-card"><img
+                                                  src="http://infinityskins.ba/wp-content/uploads/2021/10/lighPinkV2Back.jpg"
+                                                  alt="" /></div>
+                            <div id="honeycomb-back" class="material-card"><img
+                                    src="http://infinityskins.ba/wp-content/uploads/2021/10/honeyCombBack.jpg"
+                                    alt="" /></div>
+                            <div id="honey-comb-v2" class="material-card"><img
+                                    src="http://infinityskins.ba/wp-content/uploads/2021/10/honeyCombv2.jpg"
+                                    alt="" /></div>
+                            <div id="hexagon-back" class="material-card"><img
+                                    src="http://infinityskins.ba/wp-content/uploads/2021/10/hexagonBack.jpg"
+                                    alt="" /></div>
+              							<div id="blue-marbel-back" class="material-card"><img
+                                    src="http://infinityskins.ba/wp-content/uploads/2021/10/blueMarbelBack.jpg"
+                                    alt="" /></div>
+              							<div id="art-back" class="material-card"><img
+                                    src="http://infinityskins.ba/wp-content/uploads/2021/10/artBack.jpg"
                                     alt="" /></div>
                         </li>
                         <li class="material-category"></li>

@@ -283,6 +283,7 @@
     .material-card {
         width: 40px;
         height: 40px;
+        margin-bottom: 10px;
     }
 
     .et-card p {

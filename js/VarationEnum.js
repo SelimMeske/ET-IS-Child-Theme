@@ -49,5 +49,18 @@ let color_variations_mapper = {
   "carbon_yellow": "Žuti karbon",
   "carbon_white": "Bijeli karbon",
   "leopard": "Leopard",
-  "blue_camo": "Blue Camo"
+  "blue_camo": "Blue Camo",
+  "3d_cube_back": "3d Kocka",
+  "wood_back": "Drvo",
+  "supreme_back": "Supreme",
+  "summer_back": "Ljetni",
+  "snake_back": "Zmija",
+  "nike_back": "Nike",
+  "louis_vuitton_back": "Luis Vuitton",
+  "lighpink_v2_back": "Light Pink",
+  "honeycomb_back": "Honey Comb",
+  "honey_comb_v2": "Honey Comb v2",
+  "hexagon_back": "Hexagon",
+  "blue_marbel_back": "Plavi Mermer",
+  "art_back": "Umjetnost"
 }
