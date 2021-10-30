@@ -137,10 +137,10 @@ jQuery(document).ready(function() {
                             choosedCamSkin = 'leopard';
                         }
                        break;
-                    case "three_d_cube_back":
+                    case "threedcube_cube":
                         if (mode == 'back_skin') {
                             backSkinImage.href.baseVal = galaxyS21.threeDCubeBack;
-                            choosedBackSkin = 'three_d_cube_back';
+                            choosedBackSkin = 'threedcube_cube';
                         } else if (mode == 'cam_skin') {
                             camSkinImage.href.baseVal = galaxyS21.leopardCam;
                             choosedCamSkin = 'leopard';

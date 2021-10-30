@@ -1,5 +1,5 @@
 class BackSkins extends CamSkins{
-    constructor(carbonRedBack, carbonBlackBack, carbonYellowBack, carbonWhiteBack, carbonGrayBack, leopardBack, blueCamoBack, threeDCubeBack, woodBack, supremeBack, summerBack, snakeBack,
+    constructor(carbonRedBack, carbonBlackBack, carbonYellowBack, carbonWhiteBack, carbonGrayBack, leopardBack, blueCamoBack, threedcubeBack, woodBack, supremeBack, summerBack, snakeBack,
                 nikeBack, louisVuittonBack, lighPinkBack, lighPinkV2Back, honeyCombBack, honeyCombv2, hexagonBack, blueMarbelBack, artBack,
                 carbonRedCam, carbonBlackCam, yellowCarbonCam, whiteCarbonCam, carbonGrayCam, leopardCam){
         super(carbonRedCam, carbonBlackCam, yellowCarbonCam, whiteCarbonCam, carbonGrayCam, leopardCam);
@@ -10,7 +10,7 @@ class BackSkins extends CamSkins{
         this.carbonGrayBack = carbonGrayBack;
         this.leopardBack = leopardBack;
         this.blueCamoBack = blueCamoBack;
-        this.threeDCubeBack = threeDCubeBack;
+        this.threeDCubeBack = threedcubeBack;
         this.woodBack = woodBack;
         this.supremeBack = supremeBack;
         this.summerBack = summerBack;
