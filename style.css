@@ -161,6 +161,7 @@
 .material-category {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .et-back-button {
