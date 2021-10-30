@@ -50,7 +50,7 @@ let color_variations_mapper = {
   "carbon_white": "Bijeli karbon",
   "leopard": "Leopard",
   "blue_camo": "Blue Camo",
-  "3d_cube_back": "3d Kocka",
+  "three_d_cube_back": "3d Kocka",
   "wood_back": "Drvo",
   "supreme_back": "Supreme",
   "summer_back": "Ljetni",

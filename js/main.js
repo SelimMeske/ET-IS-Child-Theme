@@ -173,19 +173,19 @@ jQuery(document).ready(function() {
                             choosedCamSkin = 'leopard';
                          }
                         break;
-          					case "snakeBack":
-                                   if (mode == 'back_skin') {
-                                      backSkinImage.href.baseVal = galaxyS21.snakeBack;
-                                      choosedBackSkin = 'snakeBack';
-                                   } else if (mode == 'cam_skin') {
-                                      camSkinImage.href.baseVal = galaxyS21.leopardCam;
-                                      choosedCamSkin = 'leopard';
-                                   }
-                                  break;
-          					case "nikeBack":
+          					case "snake_back":
+                          if (mode == 'back_skin') {
+                              backSkinImage.href.baseVal = galaxyS21.snakeBack;
+                              choosedBackSkin = 'snake_back';
+                          } else if (mode == 'cam_skin') {
+                              camSkinImage.href.baseVal = galaxyS21.leopardCam;
+                              choosedCamSkin = 'leopard';
+                          }
+                        break;
+          					case "nike_back":
                                   if (mode == 'back_skin') {
                                       backSkinImage.href.baseVal = galaxyS21.nikeBack;
-                                      choosedBackSkin = 'nikeBack';
+                                      choosedBackSkin = 'nike_back';
                                     } else if (mode == 'cam_skin') {
                                       camSkinImage.href.baseVal = galaxyS21.leopardCam;
                                       choosedCamSkin = 'leopard';
