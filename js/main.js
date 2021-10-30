@@ -224,7 +224,7 @@ jQuery(document).ready(function() {
                                   break;
           					case "honeycomb_back":
                                   if (mode == 'back_skin') {
-                                      backSkinImage.href.baseVal = galaxyS21.honeyCombBack;
+                                      backSkinImage.href.baseVal = galaxyS21.honeycombBack;
                                       choosedBackSkin = 'honeycomb_back';
                                     } else if (mode == 'cam_skin') {
                                       camSkinImage.href.baseVal = galaxyS21.leopardCam;
