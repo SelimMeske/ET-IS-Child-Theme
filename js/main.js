@@ -128,6 +128,15 @@ jQuery(document).ready(function() {
                             choosedCamSkin = 'leopard';
                         }
                         break;
+                    case "blue_camo":
+                        if (mode == 'back_skin') {
+                            backSkinImage.href.baseVal = galaxyS21.blueCamoBack;
+                            choosedBackSkin = 'blue_camo';
+                        } else if (mode == 'cam_skin') {
+                            camSkinImage.href.baseVal = galaxyS21.leopardCam;
+                            choosedCamSkin = 'leopard';
+                        }
+                       break;
                 }
                 if (mode == 'back_skin') {
                     add_selected_material(allMaterialCards, choosedBackSkin, parent_card);
